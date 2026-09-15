@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kranthi Veeravalli | Infrastructure • Automation • Cloud • Innovation</title>
+<style>
+:root{--ink:#10213c;--muted:#60708a;--line:#dce6f2;--blue:#0866e8;--soft:#f6f9fd;--navy:#071a33;--green:#168a52;--purple:#6d39e8;--orange:#e56b12}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial;color:var(--ink);background:white}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;gap:26px}.brand{font-weight:900;letter-spacing:.03em;margin-right:auto}.brand span{color:var(--blue)}
+.nav a{font-size:14px}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border-radius:10px;border:1px solid #aac0db;font-weight:750;cursor:pointer;background:white}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+.hero{background:radial-gradient(circle at 80% 20%,#174f86 0,#0b2d54 28%,var(--navy) 70%);color:white;padding:76px 0 64px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:#91c8ff;font-weight:800}
+h1{font-size:55px;line-height:1;margin:12px 0 8px}.hero h2{font-size:23px;margin:0 0 18px}.hero p{font-size:18px;line-height:1.65;color:#d7e6f7;max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.hero .btn:not(.primary){background:transparent;color:white;border-color:#7992ad}
+.orbit{position:relative;min-height:330px}.core{position:absolute;inset:85px 85px;display:grid;place-items:center;border:1px solid #47719a;border-radius:50%;text-align:center;background:#0c2b4d;box-shadow:0 0 80px #0e72c433}
+.core b{font-size:28px}.chip{position:absolute;padding:12px 16px;border:1px solid #5681aa;border-radius:999px;background:#0b2747;font-weight:700}.c1{top:10px;left:38%}.c2{top:100px;right:0}.c3{bottom:30px;right:12%}.c4{bottom:20px;left:8%}.c5{top:110px;left:0}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}.metric{padding:15px 0;border-top:1px solid #42607d}.metric b{display:block;font-size:20px}.metric span{color:#b9cde1;font-size:13px}
+section{padding:70px 0}.soft{background:var(--soft)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.section-head h2{font-size:34px;margin:5px 0}.section-head p{max-width:520px;color:var(--muted);line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:white;box-shadow:0 8px 28px #1d4f8a0b}.card h3{margin:10px 0}.card p{color:var(--muted);line-height:1.55;font-size:14px}.icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#eaf3ff;color:var(--blue);font-size:22px}
+.impact .card b{font-size:31px;color:var(--blue)}.impact .card:nth-child(2) b{color:var(--green)}.impact .card:nth-child(3) b{color:var(--purple)}.impact .card:nth-child(4) b{color:var(--orange)}
+.story{cursor:pointer;transition:.2s}.story:hover{transform:translateY(-3px);box-shadow:0 14px 35px #244d8018}.story small{color:var(--blue);font-weight:800}
+.lab{background:linear-gradient(135deg,#071a33,#0b315b);color:white}.lab .section-head p{color:#bdd0e4}.labgrid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:16px}.lab .card{color:var(--ink)}.flag{display:inline-block;padding:5px 9px;border-radius:999px;background:#dff6e8;color:#126a3f;font-size:11px;font-weight:800}
+.techbar{display:flex;gap:10px;flex-wrap:wrap}.tech{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:white;font-size:13px}
+details{border:1px solid var(--line);border-radius:14px;background:white;margin:10px 0;padding:0 18px}summary{padding:18px 0;cursor:pointer;font-weight:800}details p,details li{color:var(--muted);line-height:1.6}
+.timeline{border-left:2px solid #bdd1e8;margin-left:10px;padding-left:26px}.role{position:relative;margin:0 0 34px}.role:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--blue);left:-33px;top:7px}.role h3{margin-bottom:4px}.role .date{color:var(--blue);font-weight:700;font-size:13px}.role p{color:var(--muted);line-height:1.6}
+.dropdown{position:relative}.dropbtn{background:none;border:0;font:inherit;color:inherit;cursor:pointer}.dropmenu{display:none;position:absolute;top:38px;right:0;width:520px;background:white;border:1px solid var(--line);box-shadow:0 18px 50px #173c6d24;border-radius:14px;padding:18px}.dropdown:hover .dropmenu,.dropdown:focus-within .dropmenu{display:block}.dropmenu b{display:block;margin-bottom:9px}.dropmenu p{margin:0 0 13px;color:var(--muted);font-size:13px;line-height:1.5}
+footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.note{font-size:12px;color:#7d8da3;margin-top:22px}
+.modal{display:none;position:fixed;inset:0;z-index:100;background:#071a33cc;backdrop-filter:blur(8px);padding:24px;place-items:center}
+.modal.open{display:grid}.modalbox{position:relative;width:min(860px,100%);max-height:88vh;overflow:auto;background:white;border-radius:20px;padding:30px;box-shadow:0 30px 90px #00152f55}
+.modalbox h2{margin:5px 0 12px}.modalbox p,.modalbox li{color:var(--muted);line-height:1.65}.x{position:absolute;right:16px;top:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:white;font-size:21px;cursor:pointer}
+.storybtn{border:1px solid #c7d9ee;background:#f7fbff;color:#0866e8;font-weight:800;padding:9px 13px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.2s;text-decoration:none}
+.storybtn:hover{background:#0866e8;color:white;border-color:#0866e8;transform:translateY(-1px)}
+.btn.secondary-blue{background:#eef6ff;color:#075fca;border-color:#bdd5f1}
+.btn.secondary-blue:hover{background:#dfefff}
+.progress-card{position:relative;overflow:hidden;border:1px solid #cdddf0!important;background:linear-gradient(180deg,#fff,#f8fbff)!important}
+.progress-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#0866e8}
+.recruiter-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.recruiter-highlights div{padding:13px;border:1px solid #dbe7f3;border-radius:12px;background:#f8fbff}
+.recruiter-highlights b{display:block;color:#123b67;margin-bottom:4px}.recruiter-highlights span{font-size:12px;color:#62768d;line-height:1.45}
+.contact-strip{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.contact-strip a,.contact-strip button{border:1px solid #c7d9ee;background:#fff;color:#075fca;border-radius:9px;padding:9px 11px;font-weight:800;font-size:12px;text-decoration:none}
+.result-note{font-size:11px!important;color:#7a899b!important;margin-top:8px!important}
+@media(max-width:700px){.recruiter-highlights{grid-template-columns:1fr}}
+
+.status{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:#fff4d8;color:#8b6300;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.status:before{content:"";width:7px;height:7px;border-radius:50%;background:#e8a400}
+.techline{font-size:12px!important;color:#315b87!important;font-weight:700}
+
+.ai-lite{margin-top:18px;border:1px dashed #8db3db;border-radius:14px;padding:15px;background:#f8fbff}.ai-lite b{display:block;margin-bottom:5px}
+.toast{position:fixed;right:20px;bottom:20px;background:#071a33;color:white;padding:10px 14px;border-radius:9px;opacity:0;transition:.2s;z-index:150}.toast.show{opacity:1}
+
+@media(max-width:850px){.nav>a,.dropdown{display:none}.hero-grid{grid-template-columns:1fr}.orbit{display:none}h1{font-size:42px}.cards,.metrics{grid-template-columns:1fr 1fr}.labgrid{grid-template-columns:1fr}.section-head{display:block}}
+@media(max-width:520px){.cards,.metrics{grid-template-columns:1fr}.wrap{padding:0 17px}h1{font-size:37px}.hero{padding-top:52px}}
+
+.journey{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:20px 0}.journey div{padding:13px 9px;border-radius:12px;background:#f5f9fe;text-align:center;font-size:11px;font-weight:800;color:#315779}.journey i{display:block;font-style:normal;font-size:18px;color:#0866e8;margin-bottom:4px}
+.casehub{display:grid;grid-template-columns:1fr 1fr;gap:12px}.casehub button{border:1px solid #d5e3f1;background:#f9fbfe;border-radius:13px;padding:15px;text-align:left;color:#173b63}.casehub b,.casehub span{display:block}.casehub span{font-size:11px;color:#718298;margin-top:4px}
+.solution-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.solution-flow div{border:1px solid #dce7f2;border-radius:13px;padding:15px;background:#fbfdff}.solution-flow b{display:block;color:#155fae;margin-bottom:5px}.solution-flow p{font-size:12px!important;margin:0!important}
+.innov-detail{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.innov-detail div{padding:15px;border-radius:13px;background:#f6f9fd;border:1px solid #dbe7f2}.innov-detail b{display:block;margin-bottom:5px;color:#154b84}.innov-detail span{font-size:12px;color:#65788e;line-height:1.5}
+@media(max-width:800px){.journey{grid-template-columns:1fr 1fr}.casehub,.solution-flow,.innov-detail{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><div class="brand"><span>KV</span> KRANTHI VEERAVALLI</div>
+<a href="#experience">Experience</a><a href="#engineering">Engineering</a><a href="#lessons">Lessons Learned</a><a href="#lab">Innovation Lab</a>
+<div class="dropdown"><button class="dropbtn">Technology Suite ▾</button><div class="dropmenu">
+<b>Infrastructure & Virtualization</b><p>VMware vSphere • ESXi • vCenter • SRM • VCF Lifecycle • Nutanix AHV • Prism • Move • NC2 • Windows • Linux</p>
+<b>Enterprise Storage & SAN</b><p>NetApp • Hitachi VSP • Infinidat • Dell EMC VMAX • VNX 5700 • PowerMax • PowerStore • Isilon • Cisco MDS • Brocade • NFS • SMB/CIFS</p>
+<b>DR, Replication, Data Protection & Cyber Resilience</b><p>DR setup • VMware SRM • Storage-array replication • Active-Active architectures • SnapMirror/SnapVault • Rubrik • Ransomware recovery • Isolated recovery networks • Controlled restoration • RTO/RPO validation</p>
+<b>Automation & Platform Operations</b><p>Ansible • AWX / AAP • PowerShell • REST APIs • GitLab CI/CD • ServiceNow • ITIL • Splunk</p>
+<b>Cloud, Observability & Modern Platforms</b><p>Azure • Azure Arc • Azure Local • GCP • Kubernetes • Prometheus • Grafana • GPU/AI Infrastructure</p>
+<b>AI + Infrastructure • Exploration</b><p>Vertex AI + Gemini for proactive infrastructure intelligence • Nutanix Enterprise AI + enterprise LLMs for log, incident and RCA assistance.</p>
+</div></div><a href="#resume">Resume</a><button class="btn" data-modal="recruiter" style="border:0;color:#0866e8">Recruiter View</button><a class="btn primary" href="mailto:kranthi.veeravalli@outlook.com">Let's Connect</a></div></nav>
+
+<header class="hero"><div class="wrap"><div class="hero-grid"><div>
+<div class="eyebrow">Infrastructure • Automation • Cloud • Innovation</div>
+<h1>Kranthi Veeravalli</h1><h2>Senior Infrastructure & Automation Engineer</h2>
+<p>I engineer reliable enterprise infrastructure, automate complex operations, modernize platforms, and turn practical ideas into working solutions.</p>
+<div class="actions"><a class="btn primary" href="#engineering">Explore My Engineering</a><a class="btn" href="#lab">Innovation Lab</a><a class="btn" href="#resume">View Resume</a></div>
+<div class="metrics"><div class="metric"><b>13+ Years</b><span>Enterprise experience</span></div><div class="metric"><b>Enterprise</b><span>Modernization & migrations</span></div><div class="metric"><b>Hybrid</b><span>Cloud & infrastructure</span></div><div class="metric"><b>Automation</b><span>At enterprise scale</span></div></div>
+</div><div class="orbit"><div class="core"><div><b>Engineer</b><br>Build • Automate<br>Modernize • Innovate</div></div><div class="chip c1">VMware</div><div class="chip c2">Nutanix</div><div class="chip c3">Cloud</div><div class="chip c4">Storage & SAN</div><div class="chip c5">Ansible</div></div></div></div></header>
+
+<section><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">What I Engineer</div><h2>Enterprise Capabilities</h2></div><p>Not a wall of logos. Each capability connects to real infrastructure responsibilities, migrations, automation and operational outcomes.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">▦</div><h3>Infrastructure & Virtualization</h3><p>VMware vSphere, vCenter, SRM, VCF, Nutanix AHV, Windows and Linux infrastructure.</p></div>
+<div class="card"><div class="icon">◉</div><h3>Storage, SAN & Data Protection</h3><p>NetApp, Hitachi VSP, Infinidat, Dell EMC VMAX/VNX/PowerMax/PowerStore/Isilon, Cisco MDS, Brocade, replication and data protection.</p></div>
+<div class="card"><div class="icon">⚙</div><h3>Automation & Operations</h3><p>Ansible, AWX/AAP, PowerShell, REST APIs, CI/CD, ServiceNow and large-scale infrastructure automation.</p></div>
+<div class="card"><div class="icon">☁</div><h3>Cloud & Modern Platforms</h3><p>Azure, Azure Local, Azure Arc, GCP, Kubernetes, monitoring and AI/GPU infrastructure.</p></div>
+</div></div></section>
+
+<section class="soft impact"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Selected Engineering Impact</div><h2>Technology → Measurable Results</h2></div><p>Delivered outcomes alongside forward-looking AI + infrastructure initiatives currently being explored.</p></div>
+<div class="cards">
+<div class="card"><b>~3,000 VMs</b><h3>VMware → Nutanix Migration</h3><p>Direct migration scope across production, test and sandbox, including VDI and application workloads.</p><button class="storybtn" data-modal="vmcase">View migration →</button></div>
+<div class="card"><b>495 SAN Switches</b><h3>Ansible Code Upgrades</h3><p>Cisco SAN upgrade automation across a two-location environment; broader upgrade cycle improved from roughly six months to about one month.</p><button class="storybtn" data-modal="sancase">View automation →</button></div>
+<div class="card"><b>46 Arrays</b><h3>Enterprise Storage & DR</h3><p>Storage/SAN operations, replication, DR and data protection across enterprise platforms.</p><button class="storybtn" data-modal="drimpact">View resilience →</button></div>
+<div class="card"><b>260+ NAS Shares</b><h3>Cyber Resilience & Ransomware Recovery</h3><p>Recovered production and test file shares after a ransomware incident using an isolated recovery network and Pure Storage as the clean migration target.</p><button class="storybtn" data-modal="cybercase">View recovery →</button></div>
+<div class="card"><b>AI/ML Compute</b><h3>Dell R7725 + NVIDIA GPUs</h3><p>GPU server build and platform readiness for ornithology AI/ML workloads, including PCIe, BIOS/iDRAC, thermal and infrastructure considerations.</p><button class="storybtn" data-modal="gpucase">View compute →</button></div>
+<div class="card"><b>Observability</b><h3>Prometheus + Grafana</h3><p>GPU utilization, storage capacity and compute-health dashboards for proactive infrastructure monitoring.</p><button class="storybtn" data-modal="observability">View monitoring →</button></div>
+<div class="card"><b>ITSM + Logs</b><h3>Splunk + ServiceNow</h3><p>Operational pattern for querying infrastructure logs, correlating alerts/incidents and routing actionable events into ITSM workflows.</p><button class="storybtn" data-modal="opsintegration">View operations flow →</button></div>
+<div class="card"><b>Hybrid Modernization</b><h3>VMware → Azure Local</h3><p>Workload assessment, VLAN/logical-network mapping, Azure Migrate replication, phased cutover, validation and rollback planning.</p><button class="storybtn" data-modal="azurelocal">View architecture →</button></div>
+<div class="card progress-card"><span class="status">In Progress / Exploration</span><h3 style="margin-top:14px">Vertex AI + Gemini</h3><p><b style="font-size:16px;color:#0866e8">Proactive Infrastructure Intelligence</b></p><p>Exploring telemetry-driven analysis for anomaly, capacity and performance-risk insight across hybrid infrastructure.</p><button class="storybtn" data-modal="proactiveprogress">Explore concept →</button></div>
+<div class="card progress-card"><span class="status">In Progress / Exploration</span><h3 style="margin-top:14px">NVIDIA NIM + Enterprise LLM</h3><p><b style="font-size:16px;color:#0866e8">Continuous Log, Incident & RCA Intelligence</b></p><p>Exploring continuous log/event correlation, incident-draft assistance and RCA acceleration using enterprise LLMs with engineer review.</p><button class="storybtn" data-modal="rcaprogress">Explore concept →</button></div>
+</div></div></section>
+
+<section id="engineering"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Engineering Stories</div><h2>From Challenge to Working Solution</h2></div><p>Click a story to see the challenge, engineering approach and outcome.</p></div>
+<details><summary>01 — Enterprise Modernization: VMware → Nutanix AHV</summary>
+<p><b>Environment:</b> ~10,000+ VM enterprise estate across production, test and sandbox.</p>
+<p><b>My scope:</b> ~3,000 VMs, including VDI and application workloads, including systems supporting Oracle databases.</p>
+<p><b>Platform:</b> Nutanix clusters built on Dell server infrastructure.</p>
+<button class="storybtn" data-modal="vmcase">View full engineering story →</button>
+</details>
+<details><summary>02 — Automation at Scale: 495 Cisco SAN Switches</summary>
+<p><b>Environment:</b> 46 enterprise storage arrays and 495 Cisco SAN switches distributed across two locations, supporting production, test and sandbox environments.</p>
+<p><b>The challenge:</b> SAN switch software upgrades were performed manually. Engineers had to stage the appropriate Cisco software images on each switch, validate available device storage and compatibility, and execute the upgrade workflow. At fleet scale, a complete upgrade cycle could take approximately six months.</p>
+<p><b>Automation approach:</b> We developed Ansible playbooks for Cisco SAN switch upgrades and initially validated the workflow against test switches before expanding the rollout. Upgrade jobs were launched through the enterprise Ansible controller (AWX / Ansible Tower, depending on the platform in use), with the playbooks maintained as controller projects/job templates.</p>
+<p><b>Operational improvement:</b> A switch upgrade could typically complete in roughly 20 minutes, depending on chassis and module count. With controlled automation and parallelized rollout planning, the broader switch upgrade cycle was reduced from roughly six months to about one month.</p>
+<p><b>Challenges encountered:</b> Automation was not simply “write a playbook and run it.” We encountered controller job failures and suspended jobs, controller resource/capacity constraints, insufficient switch filesystem/bootflash space for software images, upgrade tasks terminating mid-workflow, and timeout issues during long-running device operations.</p>
+<p><b>Engineering lessons:</b> The solution evolved to emphasize pre-checks before change execution: image and platform validation, available-space checks, controller capacity, timeout tuning, controlled batches, failure handling, post-upgrade validation and safe recovery procedures.</p>
+<p><b>Why this matters:</b> This case study demonstrates automation at infrastructure scale, including the operational failures and safeguards required to turn a manual network-maintenance process into a repeatable production workflow.</p><button class="storybtn" data-modal="sancase">View architecture & lessons →</button>
+</details>
+<details><summary>03 — Resilience: VMware SRM & Storage Replication</summary><p><b>Challenge:</b> Improve recovery repeatability and reduce DR failover effort.</p><p><b>Engineering:</b> SRM protection groups, automated recovery plans, RTO/RPO validation and storage replication architecture.</p></details>
+<details><summary>04 — Cyber Resilience: Ransomware Recovery</summary>
+<p><b>Incident:</b> A ransomware/security incident affected approximately 260+ NAS/file shares across production and test environments in a legacy Dell EqualLogic-backed file-share environment.</p>
+<p><b>Isolation:</b> Established a segregated recovery network before restoration so the recovery target remained separated from the affected environment.</p>
+<p><b>Recovery approach:</b> Provisioned the required storage and access on Pure Storage, established controlled connectivity, migrated the affected shares and performed recovery/access validation before restoring business access.</p>
+<p><b>Outcome:</b> Recovered and migrated the affected shares to Pure Storage and decommissioned the affected legacy environment after successful recovery validation.</p>
+<button class="storybtn" data-modal="cybercase">View recovery case study →</button>
+</details>
+<details><summary>05 — Modern Infrastructure: GPU, AI/ML & Observability</summary>
+<p><b>Research use case:</b> The Lab works with bird-observation data captured through distributed camera systems. The resulting data can support research into bird activity, behavior and movement patterns and can also contribute to public-facing educational content.</p>
+<p><b>My infrastructure scope:</b> Build and configure Dell PowerEdge R7725 GPU server infrastructure according to the compute, memory, GPU, storage, networking and availability requirements of AI/ML research workloads. My role is infrastructure enablement—not development of the bird-analysis AI/ML models.</p>
+<p><b>Compute platform:</b> The PowerEdge R7725 is a 2U dual-socket AMD EPYC 9005 platform supporting up to 192 CPU cores per socket. Depending on the validated configuration, it can support accelerator options including NVIDIA L4, L40S, H100 NVL, H200 NVL and other supported GPUs.</p>
+<button class="storybtn" data-modal="gpucase">View infrastructure story →</button>
+</details>
+</div></section>
+
+
+<section id="solutions"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow" style="color:#0866e8">From Challenge to Working Solution</div><h2>Infrastructure Integrations That Connect the Environment</h2></div><p>Not every engineering win is a migration. Some of the most valuable work is connecting platforms so operations become safer, faster and more observable.</p></div>
+<div class="solution-flow">
+<div><b>Certificate Lifecycle Automation</b><p>Splunk/CMDB expiry visibility → ServiceNow ticket → PowerShell CSR → Microsoft CA → Azure Key Vault → approval → Ansible deployment/activation across Windows, Linux, vCenter, storage, Cisco and load-balancer/API infrastructure.</p></div>
+<div><b>Backup, Recovery & Cyber Resilience</b><p>Enterprise backup/recovery, replication and recovery validation combined with isolated recovery networks, clean-target migration and controlled restoration for ransomware/cyber-recovery scenarios.</p></div>
+<div><b>Logs → Incident Operations</b><p>Splunk queries and infrastructure events → investigation/correlation → ServiceNow incident/change/problem workflow → RCA and governed remediation.</p></div>
+<div><b>Monitoring Integration</b><p>Prometheus/Grafana infrastructure dashboards plus Splunk operational investigation for compute, GPU, storage and platform health.</p></div>
+<div><b>Storage Replication & DR</b><p>Replication between enterprise arrays, VMware SRM protection/recovery planning, failover validation and RTO/RPO-focused operations.</p></div>
+<div><b>Automation Across Infrastructure</b><p>Ansible/AWX-AAP and PowerShell applied beyond one device type: SAN upgrades, health checks, certificates and repeatable infrastructure operations.</p></div>
+</div></div></section>
+<section class="soft" id="lessons"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Lessons Learned</div><h2>What Real Infrastructure Delivery Taught Me</h2></div>
+<p>Successful infrastructure work is not only the final architecture. It is planning, implementation, failures, recovery, validation and the lessons carried into the next change.</p></div>
+
+<div class="cards">
+<div class="card story"><div class="icon">N</div><h3>Nutanix Platform Transition</h3>
+<p>Cluster setup on Dell servers, migration readiness, workload transition, operational validation and the challenges encountered while moving enterprise workloads from VMware to Nutanix.</p>
+<button class="storybtn" data-modal="nutanixlesson">Setup • Implementation • Challenges →</button></div>
+
+<div class="card story"><div class="icon">↻</div><h3>Nutanix Lifecycle & Upgrade Thinking</h3>
+<p>Upgrade planning should begin with compatibility, health and dependency checks—not with the upgrade button. Controlled sequencing and recovery readiness are part of the design.</p>
+<button class="storybtn" data-modal="nutanixupgrade">Upgrade Approach →</button></div>
+
+<div class="card story"><div class="icon">A</div><h3>Automation Failure Is Engineering Data</h3>
+<p>AWX failures, timeouts, resource constraints and device-side storage issues shaped better pre-checks, batching, retry and validation strategies.</p>
+<button class="storybtn" data-modal="sancase">Automation Lessons →</button></div>
+
+<div class="card story"><div class="icon">✓</div><h3>Successful Transition Requires Validation</h3>
+<p>Migration success is more than moving a VM: application reachability, storage, network, database dependencies, performance and operational handoff must all be validated.</p>
+<button class="storybtn" data-modal="transitionlesson">Transition Lessons →</button></div>
+</div></div></section>
+
+<section id="lab" class="lab"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Kranthi's Innovation Lab</div><h2>Beyond the Enterprise</h2></div><p>Personal projects. Real problems. Working solutions. A place to show curiosity, product thinking and practical cloud engineering.</p></div>
+<div class="labgrid"><div class="card"><span class="flag">FLAGSHIP PROJECT</span><h2>BhoomiSetu</h2><h3>Andhra Pradesh Land Intelligence Platform</h3><p>Land information, marketplace intelligence, location validation, agriculture insights and a bilingual English/తెలుగు experience.</p><div class="techbar"><span class="tech">Data</span><span class="tech">GCP</span><span class="tech">Marketplace</span><span class="tech">Verification</span><span class="tech">English | తెలుగు</span></div></div>
+<div class="card"><h2>Deal Guru</h2><h3>Retail Value Intelligence</h3><p>Compare products across retailers by matching quantities and normalizing unit price—not just sticker price.</p><div class="techbar"><span class="tech">APIs</span><span class="tech">Data Processing</span><span class="tech">Cloud</span></div></div>
+<div class="card"><h2>Advaitha</h2><h3>School Assistant</h3><p>A cloud-based reminder assistant using Telegram, Cloud Run, Firestore and scheduled notifications.</p><div class="techbar"><span class="tech">Telegram</span><span class="tech">Cloud Run</span><span class="tech">Firestore</span></div></div></div>
+<div class="ai-lite"><b>AI + Infrastructure • Exploration</b>
+Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix Enterprise AI + enterprise LLMs for logs, incidents and RCA assistance.
+<button class="storybtn" data-modal="aicase" style="margin-left:8px">Explore concepts →</button></div>
+</div></section>
+
+<section id="experience"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Career Journey</div><h2>Experience That Evolved With Technology</h2></div><p>A concise recruiter view. The final site can expand each role into selected deliveries without reproducing the entire résumé.</p></div>
+<div class="timeline">
+<div class="role"><div class="date">March 2026 — Present</div><h3>Cornell University — Lab of Ornithology</h3><b>Senior Lead Infrastructure Administrator</b><p>VMware and Azure Local modernization, AI/GPU infrastructure, Kubernetes, storage/backup, Active Directory migration and platform operations.</p></div>
+<div class="role"><div class="date">March 2023 — December 2025</div><h3>HCL Technologies</h3><b>Senior Lead Infrastructure Engineer</b><p>Large-scale Nutanix migrations, VMware, enterprise storage, SAN, automation, cloud storage integration and observability.</p></div>
+<div class="role"><div class="date">May 2021 — January 2023</div><h3>NTT Data</h3><b>Systems Integration Advisor</b><p>Hybrid infrastructure integration, storage migrations, NetApp, Dell EMC, Nutanix and enterprise project delivery.</p></div>
+<div class="role"><div class="date">2012 — 2021</div><h3>Mphasis • DXC Technologies</h3><b>Infrastructure Engineering & Leadership</b><p>SAN/NAS engineering, enterprise storage migrations, automation concepts, operations leadership and large end-of-life modernization programs.</p></div>
+</div></div></section>
+
+<section id="resume" class="soft"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Recruiter View</div><h2>One Link. Multiple Depths.</h2></div><p>A recruiter can understand the profile quickly; a hiring manager can open engineering stories; a technical interviewer can explore architecture and design decisions.</p></div>
+<div class="cards"><div class="card"><h3>30 Seconds</h3><p>Professional identity, core capabilities and measurable impact.</p><button class="storybtn" data-modal="recruiter">Open recruiter view →</button></div><div class="card"><h3>3 Minutes</h3><p>Career journey, selected engineering deliveries and Innovation Lab.</p><button class="storybtn" data-modal="journey3">View my 3-minute journey →</button></div><div class="card"><h3>15 Minutes</h3><p>Architecture, technical decisions, challenges, troubleshooting and lessons learned.</p><button class="storybtn" data-modal="casehub15">Open engineering case studies →</button></div><div class="card"><h3>Resume</h3><p>The conventional document remains available as a supporting artifact—not the entire experience.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+<a class="storybtn" href="resume.html" target="_blank">View Resume →</a>
+<a class="storybtn" href="Kranthi_Veeravalli_Resume.docx" download>Download DOCX →</a>
+</div></div></div>
+<p class="note">Prototype note: public launch should remove phone details from the page, verify all quantified claims, confirm employer-confidentiality boundaries, and connect final Resume / LinkedIn / project URLs.</p>
+</div></section>
+
+<footer><div class="wrap"><div class="foot"><div><b style="font-size:21px">Let's Build Reliable Infrastructure</b><div style="margin-top:6px">Infrastructure • Automation • Hybrid Cloud • Modernization</div></div><a class="btn primary" href="mailto:kranthi.veeravalli@outlook.com">Let's Connect</a></div></div></footer>
+
+
+<div class="modal" id="gpucase"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">Modern Infrastructure • AI/ML Enablement</div>
+<h2>Dell PowerEdge R7725 GPU Infrastructure for Bird Research</h2>
+<p><b>Why the infrastructure exists:</b> Bird-observation data captured by distributed camera systems can be brought back to the Lab for processing and research analysis. Researchers can use the resulting datasets to study activity, behavior and movement patterns, while selected outputs can support educational/public content.</p>
+<p><b>My responsibility:</b> Translate AI/ML workload requirements into infrastructure: server configuration, CPU/GPU sizing, memory, local/high-speed storage, network connectivity, firmware/platform readiness, GPU enablement, operating environment and health monitoring.</p>
+<p><b>Compute capability:</b> Dell PowerEdge R7725 is a 2U system with two 5th-generation AMD EPYC 9005 processors and up to 192 cores per processor—up to 384 CPU cores at the platform maximum. Dell documents support for GPU options including NVIDIA L4, L40S, H100 NVL and H200 NVL, subject to the exact riser, thermal, power and chassis configuration.</p>
+<p><b>GPU density:</b> Dell documents up to six single-width L4 GPUs, while the RC4 riser supports up to two dual-width GPUs. Exact accelerator choice should follow the AI/ML workload profile rather than simply selecting the largest GPU.</p>
+<p><b>Engineering considerations:</b> GPU memory and compute needs, CPU-to-GPU balance, system RAM, PCIe layout, NVMe/storage throughput, network bandwidth, power/cooling, supported firmware/driver stack, monitoring and future growth.</p>
+<p><b>Important scope distinction:</b> This portfolio story demonstrates infrastructure engineering for AI/ML workloads. It does not claim ownership of the research models or scientific analysis performed by the research teams.</p>
+</div></div>
+
+<div class="modal" id="drimpact"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Storage • DR • Availability</div><h2>Enterprise Storage & Resilience</h2><p>Experience across enterprise storage and SAN platforms, replication between arrays, DR setup, VMware SRM, recovery planning and RTO/RPO validation. Resume examples include PowerStore Active-Active replication and SRM recovery workflows.</p></div></div>
+
+<div class="modal" id="cybercase"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">Cyber Resilience • Ransomware Recovery</div>
+<h2>260+ NAS Shares — Isolated Recovery to Pure Storage</h2>
+<p><b>Incident:</b> A ransomware/security incident affected approximately 260+ NAS/file shares across production and test environments in a legacy Dell EqualLogic-backed file-share environment.</p>
+<p><b>Recovery objective:</b> Separate recovery activity from the affected environment and restore the file-share services onto a clean storage target with controlled access.</p>
+<p><b>Isolation:</b> Established a segregated recovery network to keep the recovery target separated while restoration and validation were performed.</p>
+<p><b>Target platform:</b> Provisioned the required storage and access on Pure Storage and established the connectivity needed for the recovered shares.</p>
+<p><b>Migration & validation:</b> Migrated the affected file shares to the Pure Storage environment and performed recovery/access validation before controlled restoration of business access.</p>
+<p><b>Outcome:</b> Approximately 260+ shares were recovered and migrated to Pure Storage, followed by successful decommissioning of the affected legacy environment after recovery validation.</p>
+<p><b>Engineering takeaway:</b> Cyber resilience is more than having a backup. Isolation, a clean recovery target, controlled access, validation, deliberate reintegration and retirement of affected infrastructure are all part of the recovery design.</p>
+<p class="techline">Pure Storage • Dell EqualLogic-backed file services • NAS / SMB-CIFS • Network Segmentation • Ransomware Recovery • Cyber Resilience • Data Migration • Recovery Validation</p>
+</div></div>
+
+<div class="modal" id="observability"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Observability</div><h2>Prometheus + Grafana Infrastructure Dashboards</h2><p>Infrastructure monitoring for GPU utilization, storage capacity and compute health. The AI/ML platform work includes Prometheus/Grafana monitoring and GPU visibility, with the goal of surfacing infrastructure conditions before they become workload-impacting issues.</p></div></div>
+
+<div class="modal" id="opsintegration"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Operations Intelligence</div><h2>Splunk + ServiceNow Operational Flow</h2><p>Use Splunk to query and investigate infrastructure logs/events, correlate technical evidence with incidents, and connect actionable operational events to ServiceNow incident/change/problem workflows. This also provides the foundation for the future LLM-assisted incident and RCA concept.</p></div></div>
+
+<div class="modal" id="azurelocal"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Hybrid Modernization</div><h2>VMware → Azure Local Migration Readiness</h2><p>Assess VMware CPU, memory, storage, network utilization and application dependencies; design Azure Local target clusters; map VMware VLANs/port groups to logical networks; use Azure Migrate discovery/replication; execute phased cutover and validate networking, applications, monitoring and backup with rollback readiness.</p></div></div>
+
+<div class="modal" id="proactiveprogress"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">AI + Infrastructure • In Progress / Exploration</div>
+<h2>Vertex AI + Gemini — Proactive Infrastructure Intelligence</h2>
+<p><b>Goal:</b> Use approved infrastructure telemetry and operational signals to identify abnormal behavior, capacity pressure and emerging performance risk before they become service-impacting incidents.</p>
+<p><b>Potential sources:</b> Nutanix, VMware, enterprise storage/SAN, Prometheus/Grafana and other approved monitoring telemetry.</p>
+<p><b>Concept:</b> Telemetry / metrics → preprocessing and context → Vertex AI + Gemini analysis → anomaly/risk summary → recommended investigation → engineer review.</p>
+<p><b>Guardrail:</b> This is an R&amp;D direction, not a claimed production implementation. AI provides analysis and recommendations; production remediation remains controlled by engineers and governed automation.</p>
+</div></div>
+
+<div class="modal" id="rcaprogress"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">AI + Infrastructure • In Progress / Exploration</div>
+<h2>NVIDIA NIM + Enterprise LLM — Continuous Log, Incident & RCA Intelligence</h2>
+<p><b>Goal:</b> Continuously analyze approved infrastructure logs/events, correlate related symptoms and reduce the time engineers spend assembling incident context.</p>
+<p><b>Potential sources:</b> Splunk logs, ServiceNow incidents, infrastructure alerts/events and historical operational knowledge.</p>
+<p><b>Concept:</b> Logs + alerts + ITSM context → enterprise LLM served through an appropriate private/enterprise AI platform → correlation and summarization → incident-draft assistance → probable RCA / troubleshooting suggestions → engineer review.</p>
+<p><b>NVIDIA role:</b> NVIDIA NIM can be considered as an enterprise model-serving option; the exact LLM should be selected and validated for the use case rather than claiming “NVIDIA LLM” as one specific model.</p>
+<p><b>Guardrail:</b> This remains an exploration/POC direction. Incident creation, RCA acceptance and remediation stay governed by human review and existing operational controls.</p>
+</div></div>
+
+<div class="modal" id="vmcase"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Engineering Case Study</div><h2>VMware → Nutanix AHV Modernization</h2><p><b>Context:</b> The organization operated an estate of approximately 10,000+ VMs across production, test and sandbox. My direct migration scope was approximately 3,000 VMs.</p><p><b>Workloads:</b> VDI and application VMs, including systems supporting Oracle database workloads.</p><p><b>Target platform:</b> Nutanix clusters built on Dell server infrastructure.</p><p><b>Engineering approach:</b> workload assessment, readiness and dependency validation, migration waves, cutover planning, rollback readiness and post-migration validation.</p><p><b>Business rationale:</b> The modernization was also driven by the need to reduce VMware licensing/infrastructure cost and simplify platform operations. The public portfolio explains the cost-reduction strategy without publishing an exact savings figure until that number is separately approved for external disclosure.</p><p><b>Portfolio principle:</b> the overall environment scale and my direct delivery scope are intentionally shown separately.</p></div></div>
+
+<div class="modal" id="sancase"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Automation at Scale</div><h2>Cisco SAN Code Upgrade Automation</h2><p><b>Environment:</b> 495 Cisco SAN switches and 46 enterprise storage arrays across two locations, spanning production, test and sandbox.</p><p><b>Before:</b> software images were staged and upgrades executed manually; a fleet cycle could take about six months.</p><p><b>Automation:</b> Ansible playbooks executed through the enterprise automation controller, first validated against test switches and then expanded through controlled rollout.</p><p><b>Result:</b> an individual switch upgrade could typically run in roughly 20 minutes depending on chassis/module count, while the broader upgrade cycle was reduced to about one month.</p><p><b>Challenges:</b> failed/suspended controller jobs, controller resource pressure, insufficient switch image-storage space, upgrade termination and timeout handling.</p><p><b>Lessons:</b> pre-check image/platform compatibility, available space, controller capacity and timeouts; use controlled batches, failure handling, recovery procedures and post-upgrade validation.</p></div></div>
+
+<div class="modal" id="aicase"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">AI + Infrastructure • Exploration</div><h2>Practical AI Directions for Infrastructure</h2><p><b>01 — Vertex AI + Gemini: Proactive Infrastructure Intelligence</b><br>Explore telemetry from Nutanix, VMware, storage, SAN and observability platforms to surface anomalies, capacity pressure and performance risk earlier.</p><p><b>02 — Nutanix Enterprise AI + Enterprise LLMs: Incident & RCA Intelligence</b><br>Explore Splunk logs, ServiceNow incidents and infrastructure events for correlation, summarization and RCA assistance.</p><p>Both are intentionally labeled exploration/R&amp;D. AI provides insight and recommendations; production remediation remains controlled by engineers and governed automation.</p></div></div>
+
+
+<div class="modal" id="nutanixlesson"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">Lessons Learned • Nutanix</div>
+<h2>From Cluster Setup to Successful Workload Transition</h2>
+<p><b>Platform setup:</b> Nutanix clusters were built on Dell server infrastructure. The work required treating compute, storage, networking, cluster health and operational readiness as one platform rather than independent components.</p>
+<p><b>Migration preparation:</b> The source VMware estate contained production, test and sandbox workloads. My direct migration scope was approximately 3,000 VMs, including VDI and application VMs and systems supporting Oracle database workloads.</p>
+<p><b>Implementation approach:</b> assess workloads and dependencies → validate target capacity/readiness → group migration waves → perform controlled cutover → validate application/network/storage behavior → monitor after transition.</p>
+<p><b>Challenges & failures:</b> Not every workload should be treated the same. Dependencies, migration windows, application behavior, database sensitivity, network reachability, storage performance and rollback requirements can change the migration approach. Failures and exceptions need to be isolated rather than allowing one workload to disrupt an entire wave.</p>
+<p><b>Successful transition:</b> A migration is complete only after workload health, connectivity, application access, performance and operational ownership are validated on the Nutanix platform.</p>
+</div></div>
+
+<div class="modal" id="nutanixupgrade"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">Lessons Learned • Lifecycle</div>
+<h2>Nutanix Upgrade / Lifecycle Approach</h2>
+<p><b>Before upgrade:</b> review cluster health, capacity/headroom, alerts, hardware/firmware dependencies, software compatibility, backup/recovery readiness and the approved maintenance window.</p>
+<p><b>Plan the sequence:</b> understand the lifecycle components and dependencies, define the supported upgrade path, confirm workload resiliency, communicate impact and avoid unnecessary concurrent infrastructure changes.</p>
+<p><b>During execution:</b> monitor cluster health and workload availability continuously. Treat warnings, node/service issues or failed checks as decision points rather than automatically pushing forward.</p>
+<p><b>Failure handling:</b> capture the failed stage, preserve logs/evidence, validate cluster stability, determine whether to retry, pause or escalate, and avoid turning a recoverable component issue into a broader outage.</p>
+<p><b>After upgrade:</b> validate cluster health, nodes/CVMs, storage, networking, VM availability, performance and monitoring/alerting before declaring the maintenance successful.</p>
+<p><b>Portfolio note:</b> This describes my lifecycle engineering approach. We will add exact Nutanix upgrade incidents and versions only after validating the specific real-world examples.</p>
+</div></div>
+
+<div class="modal" id="transitionlesson"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">Lessons Learned • Migration</div>
+<h2>What Makes an Infrastructure Transition Successful?</h2>
+<p><b>Before:</b> inventory, ownership, dependencies, capacity, compatibility, migration wave design, change approval and rollback planning.</p>
+<p><b>During:</b> controlled batches, clear checkpoints, exception handling, communication and real-time validation.</p>
+<p><b>After:</b> VM health alone is not enough. Validate network reachability, storage, application/service functionality, database dependencies, performance, monitoring and support handoff.</p>
+<p><b>Lesson:</b> Successful modernization is a controlled transition of services and operations—not simply movement from one hypervisor to another.</p>
+</div></div>
+
+<div class="modal" id="journey3"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">3-Minute Career Journey</div><h2>From Storage & SAN to Modern Infrastructure</h2>
+<p>I started my infrastructure career close to the foundation: enterprise storage, SAN, provisioning, availability and operational support. That foundation expanded into virtualization and VMware, then HCI and Nutanix modernization, automation, hybrid cloud and now GPU/AI infrastructure enablement.</p>
+<div class="journey"><div><i>01</i>Storage & SAN</div><div><i>02</i>VMware</div><div><i>03</i>Nutanix / HCI</div><div><i>04</i>Ansible Automation</div><div><i>05</i>DR & Hybrid Cloud</div><div><i>06</i>GPU / AI Infrastructure</div><div><i>07</i>AI + Infra R&amp;D</div></div>
+<p><b>Today:</b> I bring these layers together—compute, virtualization, storage, SAN, DR, automation, monitoring, ITSM and modern AI/ML infrastructure—rather than treating them as isolated technologies.</p>
+</div></div>
+
+<div class="modal" id="casehub15"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">15-Minute Engineering View</div><h2>Choose the Engineering Story</h2><p>Go deeper into architecture, challenges, failures, lessons and outcomes.</p>
+<div class="casehub">
+<button data-modal="vmcase"><b>VMware → Nutanix Modernization</b><span>~3,000 VM scope • Dell/Nutanix clusters • migration waves • licensing/operational cost reduction rationale</span></button>
+<button data-modal="sancase"><b>Cisco SAN Upgrade Automation</b><span>495 switches • Ansible • AWX/AAP failures • prechecks • ~6 months → ~1 month</span></button>
+<button data-modal="cybercase"><b>Cyber Resilience & Ransomware Recovery</b><span>260+ NAS shares • isolated recovery network • Pure Storage • validation • controlled restoration</span></button>
+<button data-modal="nutanixlesson"><b>Nutanix Setup & Transition</b><span>Platform setup • implementation • workload transition • challenges • validation</span></button>
+<button data-modal="nutanixupgrade"><b>Nutanix Lifecycle / Upgrade</b><span>Health • compatibility • sequencing • failure handling • post-upgrade checks</span></button>
+<button data-modal="gpucase"><b>Dell R7725 GPU Infrastructure</b><span>NVIDIA GPU compute • AI/ML workload enablement • platform sizing and readiness</span></button>
+<button data-modal="transitionlesson"><b>DR / Migration Validation</b><span>Dependencies • rollback • application/network/storage validation • operational handoff</span></button>
+</div></div></div>
+
+<div class="modal" id="bhoomideep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab • Flagship</div><h2>BhoomiSetu</h2><div class="innov-detail"><div><b>Problem</b><span>Land information is fragmented and difficult for farmers, public users and NRIs to understand in one place.</span></div><div><b>What I Built</b><span>AP district/mandal/village data pipeline, marketplace aggregation, validation/scoring concepts, agriculture context, API and bilingual UI.</span></div><div><b>Current State</b><span>Cloud-hosted working platform with statewide location data and an evolving land marketplace/data-validation pipeline.</span></div></div></div></div>
+<div class="modal" id="dealgurudeep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab</div><h2>Deal Guru</h2><div class="innov-detail"><div><b>Problem</b><span>Package price alone hides which retailer actually offers the best unit value.</span></div><div><b>What I Built</b><span>Multi-store comparison logic, quantity normalization, unit-price calculation and value comparison.</span></div><div><b>Current State</b><span>Working prototype with cloud/mobile-access direction and messaging-agent exploration.</span></div></div></div></div>
+<div class="modal" id="advaithadeep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab</div><h2>Advaitha School Assistant</h2><div class="innov-detail"><div><b>Problem</b><span>School and daily reminders needed a simple mobile interaction instead of another complex app.</span></div><div><b>What I Built</b><span>Telegram assistant, Cloud Run webhook, Firestore reminder storage and scheduled notification workflow.</span></div><div><b>Current State</b><span>Working cloud-based reminder assistant with scheduled-message expansion planned.</span></div></div></div></div>
+
+<div class="modal" id="recruiter"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">30-Second Recruiter View</div>
+<h2>Kranthi Veeravalli</h2>
+<p><b>Senior Cloud Operations & Infrastructure Engineer</b> with 13+ years across virtualization, HCI, enterprise storage/SAN, DR, automation, hybrid infrastructure and AI/ML infrastructure enablement.</p>
+
+<div class="recruiter-highlights">
+<div><b>VMware / Nutanix Modernization</b><span>~3,000 VMs in direct VMware → Nutanix migration scope; vSphere, vCenter, SRM, VCF lifecycle, Nutanix AHV/Prism/Move.</span></div>
+<div><b>Automation at Scale</b><span>Ansible / AWX-AAP for Cisco SAN code upgrades across 495 switches; PowerShell and CI/CD for repeatable infrastructure operations.</span></div>
+<div><b>Enterprise Storage / DR</b><span>46-array environment; NetApp, Hitachi VSP, Infinidat, Dell EMC VMAX/VNX/PowerMax/PowerStore/Isilon, SAN, replication and recovery.</span></div>
+<div><b>Cyber Resilience</b><span>Ransomware recovery involving 260+ production/test NAS shares, an isolated recovery network, migration to Pure Storage, recovery validation and controlled restoration.</span></div>
+<div><b>AI/ML Infrastructure</b><span>Dell PowerEdge R7725 GPU compute, NVIDIA GPU enablement, Kubernetes, CUDA-ready infrastructure and AI/ML workload platform readiness.</span></div>
+<div><b>Observability</b><span>Prometheus + Grafana dashboards for GPU utilization, storage capacity and compute health; Splunk for infrastructure log investigation.</span></div>
+<div><b>ITSM / Operations</b><span>ServiceNow incident/change/problem/CMDB workflows, Splunk-to-ITSM operational thinking, RCA and ITIL-aligned support.</span></div>
+<div><b>Hybrid Cloud</b><span>Azure / Azure Local / Azure Arc, VMware migration readiness, logical-network mapping, phased cutover and validation.</span></div>
+<div><b>AI + Infrastructure Direction</b><span>Vertex AI + Gemini for proactive analysis; NVIDIA NIM + enterprise LLMs for continuous logs, incident intelligence and RCA assistance — clearly R&amp;D/exploration.</span></div>
+</div>
+
+<div class="contact-strip">
+<a href="mailto:kranthi.veeravalli@outlook.com">✉ kranthi.veeravalli@outlook.com</a>
+<a href="tel:+17542841138">☎ +1 754-284-1138</a>
+<a href="https://www.linkedin.com/in/kk-v-60b581150" target="_blank" rel="noopener noreferrer">in LinkedIn Profile</a>
+</div>
+
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<a class="btn primary" href="Kranthi_Veeravalli_Resume.docx" download>Download Updated Resume</a>
+<a class="btn" href="resume.html" target="_blank">View Resume</a>
+<button class="btn" id="copyEmail">Copy Email</button>
+</div>
+<p class="result-note">Recruiter contact actions now include email, mobile, LinkedIn and the latest resume.</p>
+</div></div>
+<div class="toast" id="toast">Email copied</div>
+
+<script>
+document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.modal.open').forEach(x=>x.classList.remove('open'));const m=document.getElementById(b.dataset.modal);if(m){m.classList.add('open');document.body.style.overflow='hidden'}}));
+document.querySelectorAll('.modal .x').forEach(b=>b.addEventListener('click',()=>{b.closest('.modal').classList.remove('open');document.body.style.overflow=''}));
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow=''}}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow=''})});
+const ce=document.getElementById('copyEmail'); if(ce) ce.addEventListener('click',async()=>{const v='kranthi.veeravalli@outlook.com';try{await navigator.clipboard.writeText(v)}catch(e){}const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)});
+</script>
+
+</body></html>
