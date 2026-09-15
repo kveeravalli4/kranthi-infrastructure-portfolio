@@ -68,7 +68,7 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 <div class="dropdown"><button class="dropbtn">Technology Suite ▾</button><div class="dropmenu">
 <b>Infrastructure & Virtualization</b><p>VMware vSphere • ESXi • vCenter • SRM • VCF Lifecycle • Nutanix AHV • Prism • Move • NC2 • Windows • Linux</p>
 <b>Enterprise Storage & SAN</b><p>NetApp • Hitachi VSP • Infinidat • Dell EMC VMAX • VNX 5700 • PowerMax • PowerStore • Isilon • Cisco MDS • Brocade • NFS • SMB/CIFS</p>
-<b>DR, Replication & Data Protection</b><p>DR setup • VMware SRM • Storage-array replication • Active-Active architectures • SnapMirror/SnapVault • Rubrik • RTO/RPO validation</p>
+<b>DR, Replication, Data Protection & Cyber Resilience</b><p>DR setup • VMware SRM • Storage-array replication • Active-Active architectures • SnapMirror/SnapVault • Rubrik • Ransomware recovery • Isolated recovery networks • Controlled restoration • RTO/RPO validation</p>
 <b>Automation & Platform Operations</b><p>Ansible • AWX / AAP • PowerShell • REST APIs • GitLab CI/CD • ServiceNow • ITIL • Splunk</p>
 <b>Cloud, Observability & Modern Platforms</b><p>Azure • Azure Arc • Azure Local • GCP • Kubernetes • Prometheus • Grafana • GPU/AI Infrastructure</p>
 <b>AI + Infrastructure • Exploration</b><p>Vertex AI + Gemini for proactive infrastructure intelligence • Nutanix Enterprise AI + enterprise LLMs for log, incident and RCA assistance.</p>
@@ -95,6 +95,7 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 <div class="card"><b>~3,000 VMs</b><h3>VMware → Nutanix Migration</h3><p>Direct migration scope across production, test and sandbox, including VDI and application workloads.</p><button class="storybtn" data-modal="vmcase">View migration →</button></div>
 <div class="card"><b>495 SAN Switches</b><h3>Ansible Code Upgrades</h3><p>Cisco SAN upgrade automation across a two-location environment; broader upgrade cycle improved from roughly six months to about one month.</p><button class="storybtn" data-modal="sancase">View automation →</button></div>
 <div class="card"><b>46 Arrays</b><h3>Enterprise Storage & DR</h3><p>Storage/SAN operations, replication, DR and data protection across enterprise platforms.</p><button class="storybtn" data-modal="drimpact">View resilience →</button></div>
+<div class="card"><b>260+ NAS Shares</b><h3>Cyber Resilience & Ransomware Recovery</h3><p>Recovered production and test file shares after a ransomware incident using an isolated recovery network and Pure Storage as the clean migration target.</p><button class="storybtn" data-modal="cybercase">View recovery →</button></div>
 <div class="card"><b>AI/ML Compute</b><h3>Dell R7725 + NVIDIA GPUs</h3><p>GPU server build and platform readiness for ornithology AI/ML workloads, including PCIe, BIOS/iDRAC, thermal and infrastructure considerations.</p><button class="storybtn" data-modal="gpucase">View compute →</button></div>
 <div class="card"><b>Observability</b><h3>Prometheus + Grafana</h3><p>GPU utilization, storage capacity and compute-health dashboards for proactive infrastructure monitoring.</p><button class="storybtn" data-modal="observability">View monitoring →</button></div>
 <div class="card"><b>ITSM + Logs</b><h3>Splunk + ServiceNow</h3><p>Operational pattern for querying infrastructure logs, correlating alerts/incidents and routing actionable events into ITSM workflows.</p><button class="storybtn" data-modal="opsintegration">View operations flow →</button></div>
@@ -120,7 +121,14 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 <p><b>Why this matters:</b> This case study demonstrates automation at infrastructure scale, including the operational failures and safeguards required to turn a manual network-maintenance process into a repeatable production workflow.</p><button class="storybtn" data-modal="sancase">View architecture & lessons →</button>
 </details>
 <details><summary>03 — Resilience: VMware SRM & Storage Replication</summary><p><b>Challenge:</b> Improve recovery repeatability and reduce DR failover effort.</p><p><b>Engineering:</b> SRM protection groups, automated recovery plans, RTO/RPO validation and storage replication architecture.</p></details>
-<details><summary>04 — Modern Infrastructure: GPU, AI/ML & Observability</summary>
+<details><summary>04 — Cyber Resilience: Ransomware Recovery</summary>
+<p><b>Incident:</b> A ransomware/security incident affected approximately 260+ NAS/file shares across production and test environments in a legacy Dell EqualLogic-backed file-share environment.</p>
+<p><b>Isolation:</b> Established a segregated recovery network before restoration so the recovery target remained separated from the affected environment.</p>
+<p><b>Recovery approach:</b> Provisioned the required storage and access on Pure Storage, established controlled connectivity, migrated the affected shares and performed recovery/access validation before restoring business access.</p>
+<p><b>Outcome:</b> Recovered and migrated the affected shares to Pure Storage and decommissioned the affected legacy environment after successful recovery validation.</p>
+<button class="storybtn" data-modal="cybercase">View recovery case study →</button>
+</details>
+<details><summary>05 — Modern Infrastructure: GPU, AI/ML & Observability</summary>
 <p><b>Research use case:</b> The Lab works with bird-observation data captured through distributed camera systems. The resulting data can support research into bird activity, behavior and movement patterns and can also contribute to public-facing educational content.</p>
 <p><b>My infrastructure scope:</b> Build and configure Dell PowerEdge R7725 GPU server infrastructure according to the compute, memory, GPU, storage, networking and availability requirements of AI/ML research workloads. My role is infrastructure enablement—not development of the bird-analysis AI/ML models.</p>
 <p><b>Compute platform:</b> The PowerEdge R7725 is a 2U dual-socket AMD EPYC 9005 platform supporting up to 192 CPU cores per socket. Depending on the validated configuration, it can support accelerator options including NVIDIA L4, L40S, H100 NVL, H200 NVL and other supported GPUs.</p>
@@ -133,7 +141,7 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 <div class="section-head"><div><div class="eyebrow" style="color:#0866e8">From Challenge to Working Solution</div><h2>Infrastructure Integrations That Connect the Environment</h2></div><p>Not every engineering win is a migration. Some of the most valuable work is connecting platforms so operations become safer, faster and more observable.</p></div>
 <div class="solution-flow">
 <div><b>Certificate Lifecycle Automation</b><p>Splunk/CMDB expiry visibility → ServiceNow ticket → PowerShell CSR → Microsoft CA → Azure Key Vault → approval → Ansible deployment/activation across Windows, Linux, vCenter, storage, Cisco and load-balancer/API infrastructure.</p></div>
-<div><b>Backup & Recovery Integration</b><p>On-prem infrastructure protection with enterprise backup/recovery, cloud-aware architecture, replication and validation so recovery is designed into modernization rather than added afterward.</p></div>
+<div><b>Backup, Recovery & Cyber Resilience</b><p>Enterprise backup/recovery, replication and recovery validation combined with isolated recovery networks, clean-target migration and controlled restoration for ransomware/cyber-recovery scenarios.</p></div>
 <div><b>Logs → Incident Operations</b><p>Splunk queries and infrastructure events → investigation/correlation → ServiceNow incident/change/problem workflow → RCA and governed remediation.</p></div>
 <div><b>Monitoring Integration</b><p>Prometheus/Grafana infrastructure dashboards plus Splunk operational investigation for compute, GPU, storage and platform health.</p></div>
 <div><b>Storage Replication & DR</b><p>Replication between enterprise arrays, VMware SRM protection/recovery planning, failover validation and RTO/RPO-focused operations.</p></div>
@@ -201,6 +209,19 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 </div></div>
 
 <div class="modal" id="drimpact"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Storage • DR • Availability</div><h2>Enterprise Storage & Resilience</h2><p>Experience across enterprise storage and SAN platforms, replication between arrays, DR setup, VMware SRM, recovery planning and RTO/RPO validation. Resume examples include PowerStore Active-Active replication and SRM recovery workflows.</p></div></div>
+
+<div class="modal" id="cybercase"><div class="modalbox"><button class="x">×</button>
+<div class="eyebrow" style="color:#0866e8">Cyber Resilience • Ransomware Recovery</div>
+<h2>260+ NAS Shares — Isolated Recovery to Pure Storage</h2>
+<p><b>Incident:</b> A ransomware/security incident affected approximately 260+ NAS/file shares across production and test environments in a legacy Dell EqualLogic-backed file-share environment.</p>
+<p><b>Recovery objective:</b> Separate recovery activity from the affected environment and restore the file-share services onto a clean storage target with controlled access.</p>
+<p><b>Isolation:</b> Established a segregated recovery network to keep the recovery target separated while restoration and validation were performed.</p>
+<p><b>Target platform:</b> Provisioned the required storage and access on Pure Storage and established the connectivity needed for the recovered shares.</p>
+<p><b>Migration & validation:</b> Migrated the affected file shares to the Pure Storage environment and performed recovery/access validation before controlled restoration of business access.</p>
+<p><b>Outcome:</b> Approximately 260+ shares were recovered and migrated to Pure Storage, followed by successful decommissioning of the affected legacy environment after recovery validation.</p>
+<p><b>Engineering takeaway:</b> Cyber resilience is more than having a backup. Isolation, a clean recovery target, controlled access, validation, deliberate reintegration and retirement of affected infrastructure are all part of the recovery design.</p>
+<p class="techline">Pure Storage • Dell EqualLogic-backed file services • NAS / SMB-CIFS • Network Segmentation • Ransomware Recovery • Cyber Resilience • Data Migration • Recovery Validation</p>
+</div></div>
 
 <div class="modal" id="observability"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Observability</div><h2>Prometheus + Grafana Infrastructure Dashboards</h2><p>Infrastructure monitoring for GPU utilization, storage capacity and compute health. The AI/ML platform work includes Prometheus/Grafana monitoring and GPU visibility, with the goal of surfacing infrastructure conditions before they become workload-impacting issues.</p></div></div>
 
@@ -274,6 +295,7 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <div class="casehub">
 <button data-modal="vmcase"><b>VMware → Nutanix Modernization</b><span>~3,000 VM scope • Dell/Nutanix clusters • migration waves • licensing/operational cost reduction rationale</span></button>
 <button data-modal="sancase"><b>Cisco SAN Upgrade Automation</b><span>495 switches • Ansible • AWX/AAP failures • prechecks • ~6 months → ~1 month</span></button>
+<button data-modal="cybercase"><b>Cyber Resilience & Ransomware Recovery</b><span>260+ NAS shares • isolated recovery network • Pure Storage • validation • controlled restoration</span></button>
 <button data-modal="nutanixlesson"><b>Nutanix Setup & Transition</b><span>Platform setup • implementation • workload transition • challenges • validation</span></button>
 <button data-modal="nutanixupgrade"><b>Nutanix Lifecycle / Upgrade</b><span>Health • compatibility • sequencing • failure handling • post-upgrade checks</span></button>
 <button data-modal="gpucase"><b>Dell R7725 GPU Infrastructure</b><span>NVIDIA GPU compute • AI/ML workload enablement • platform sizing and readiness</span></button>
@@ -293,6 +315,7 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <div><b>VMware / Nutanix Modernization</b><span>~3,000 VMs in direct VMware → Nutanix migration scope; vSphere, vCenter, SRM, VCF lifecycle, Nutanix AHV/Prism/Move.</span></div>
 <div><b>Automation at Scale</b><span>Ansible / AWX-AAP for Cisco SAN code upgrades across 495 switches; PowerShell and CI/CD for repeatable infrastructure operations.</span></div>
 <div><b>Enterprise Storage / DR</b><span>46-array environment; NetApp, Hitachi VSP, Infinidat, Dell EMC VMAX/VNX/PowerMax/PowerStore/Isilon, SAN, replication and recovery.</span></div>
+<div><b>Cyber Resilience</b><span>Ransomware recovery involving 260+ production/test NAS shares, an isolated recovery network, migration to Pure Storage, recovery validation and controlled restoration.</span></div>
 <div><b>AI/ML Infrastructure</b><span>Dell PowerEdge R7725 GPU compute, NVIDIA GPU enablement, Kubernetes, CUDA-ready infrastructure and AI/ML workload platform readiness.</span></div>
 <div><b>Observability</b><span>Prometheus + Grafana dashboards for GPU utilization, storage capacity and compute health; Splunk for infrastructure log investigation.</span></div>
 <div><b>ITSM / Operations</b><span>ServiceNow incident/change/problem/CMDB workflows, Splunk-to-ITSM operational thinking, RCA and ITIL-aligned support.</span></div>
