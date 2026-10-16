@@ -60,11 +60,264 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 .solution-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.solution-flow div{border:1px solid #dce7f2;border-radius:13px;padding:15px;background:#fbfdff}.solution-flow b{display:block;color:#155fae;margin-bottom:5px}.solution-flow p{font-size:12px!important;margin:0!important}
 .innov-detail{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.innov-detail div{padding:15px;border-radius:13px;background:#f6f9fd;border:1px solid #dbe7f2}.innov-detail b{display:block;margin-bottom:5px;color:#154b84}.innov-detail span{font-size:12px;color:#65788e;line-height:1.5}
 @media(max-width:800px){.journey{grid-template-columns:1fr 1fr}.casehub,.solution-flow,.innov-detail{grid-template-columns:1fr}}
+
+.bhoomi-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#ffffff,#f4fbf7)!important;border-color:#bfe1cf!important}
+.bhoomi-card:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-55px;top:-55px;background:#168a5210}
+.bhoomi-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.bhoomi-stat{padding:10px 7px;border:1px solid #d9eadf;border-radius:11px;background:#fff;text-align:center}
+.bhoomi-stat b{display:block;font-size:18px;color:#126a3f}.bhoomi-stat span{font-size:10px;color:#718298}
+.lab-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.livebtn{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:9px;background:#168a52;color:#fff;font-weight:800;font-size:13px;border:1px solid #168a52}
+.livebtn:hover{background:#116e41}
+.project-status{display:inline-flex;align-items:center;gap:7px;margin-top:13px;font-size:11px;font-weight:800;color:#126a3f}
+.project-status:before{content:"";width:8px;height:8px;border-radius:50%;background:#20a765}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:14px 0 20px}
+.feature-grid div{padding:11px 12px;border:1px solid #dce7f2;border-radius:11px;background:#fbfdff;font-size:12px;color:#425c76}
+.arch-flow{display:flex;align-items:stretch;gap:7px;flex-wrap:wrap;margin:15px 0}
+.arch-flow span{flex:1;min-width:105px;padding:12px 8px;border-radius:10px;background:#eef6ff;border:1px solid #cfe0f2;text-align:center;font-size:11px;font-weight:800;color:#24527e}
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.roadmap div{padding:11px;border-radius:10px;border:1px solid #dce7f2;background:#fbfdff;font-size:11px;color:#60708a}.roadmap b{display:block;color:#173b63;margin-bottom:4px}
+@media(max-width:700px){.bhoomi-stats,.feature-grid,.roadmap{grid-template-columns:1fr}.arch-flow{display:grid;grid-template-columns:1fr}}
+
+
+.contact-profile{text-align:center;padding:4px 0 8px}
+.contact-profile h2{margin:6px 0 4px}
+.contact-profile p{margin:0;color:var(--muted)}
+.contact-options{display:grid;gap:12px;margin:22px 0}
+.contact-option{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:#f9fbfe}
+.contact-option .contact-info{min-width:0}
+.contact-option .contact-label{display:block;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#718298;margin-bottom:4px}
+.contact-option .contact-value{font-weight:800;color:#173b63;overflow-wrap:anywhere}
+.contact-option .contact-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.contact-option .contact-actions a,.contact-option .contact-actions button{border:1px solid #c7d9ee;background:white;color:#075fca;border-radius:8px;padding:8px 10px;font-weight:800;font-size:12px;cursor:pointer}
+.contact-resume{text-align:center;margin-top:8px}
+@media(max-width:620px){.contact-option{align-items:flex-start;flex-direction:column}.contact-option .contact-actions{justify-content:flex-start}}
+
+
+.home-impact{padding:34px 0 58px;background:#fff}
+.home-impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.home-impact-card{border:1px solid var(--line);border-radius:15px;padding:18px 20px;background:#fff}
+.home-impact-card b{display:block;font-size:26px;color:var(--blue);margin-bottom:4px}
+.home-impact-card span{font-size:13px;color:var(--muted)}
+.explore-home{padding:56px 0;background:var(--soft)}
+.explore-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.explore-card{display:block;border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff;transition:.2s}
+.explore-card:hover{transform:translateY(-3px);box-shadow:0 14px 35px #244d8018;border-color:#b8d0ea}
+.explore-card .num{font-size:11px;font-weight:900;letter-spacing:.1em;color:var(--blue)}
+.explore-card h3{margin:8px 0 7px;font-size:19px}
+.explore-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+@media(max-width:850px){.explore-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.home-impact-grid,.explore-grid{grid-template-columns:1fr}}
+
+
+/* ===== Modern visual refresh ===== */
+:root{
+  --ink:#10213c;--muted:#60708a;--line:#dce6f2;
+  --blue:#2563eb;--soft:#f7f9fc;--navy:#081426;
+  --green:#16a36a;--purple:#7c3aed;--orange:#f97316;
+  --cyan:#0ea5e9;
+}
+body{
+  background:
+    radial-gradient(circle at 8% 5%,rgba(37,99,235,.06),transparent 24%),
+    radial-gradient(circle at 92% 12%,rgba(14,165,233,.05),transparent 22%),
+    #fff;
+}
+nav{
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(15,35,65,.06);
+}
+.brand span{
+  display:inline-grid;place-items:center;width:32px;height:32px;margin-right:7px;
+  border-radius:10px;color:#fff;
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  box-shadow:0 7px 18px rgba(37,99,235,.22)
+}
+.btn{
+  border-radius:999px;
+  padding:11px 18px;
+  border:1px solid #cbd9ea;
+  font-weight:800;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
+  box-shadow:0 4px 12px rgba(20,52,91,.04);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,52,91,.12)}
+.btn.primary{
+  border:0;
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  box-shadow:0 9px 24px rgba(37,99,235,.25);
+}
+.hero{
+  position:relative;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(14,165,233,.28),transparent 26%),
+    radial-gradient(circle at 18% 82%,rgba(124,58,237,.15),transparent 30%),
+    linear-gradient(135deg,#071426 0%,#0b2341 54%,#0a3155 100%);
+  padding:88px 0 72px;
+}
+.hero:after{
+  content:"";position:absolute;inset:auto -120px -180px auto;width:430px;height:430px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.018);
+}
+.hero h1{
+  font-size:clamp(42px,5vw,62px);
+  letter-spacing:-.045em;
+  background:linear-gradient(90deg,#fff,#bfe4ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h2{color:#e7f2ff;font-weight:650}
+.hero .btn:not(.primary){
+  background:rgba(255,255,255,.07);
+  border-color:rgba(255,255,255,.22);
+  backdrop-filter:blur(8px);
+}
+.metric{
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:17px;
+}
+.metric b{font-size:22px}
+.orbit .core{
+  background:linear-gradient(145deg,#0b294b,#0d3d67);
+  border-color:rgba(151,209,255,.35);
+  box-shadow:0 0 70px rgba(14,165,233,.17),inset 0 0 30px rgba(255,255,255,.03);
+}
+.chip{
+  background:rgba(8,35,64,.82);
+  border-color:rgba(123,187,240,.45);
+  backdrop-filter:blur(10px);
+  box-shadow:0 9px 22px rgba(0,0,0,.12);
+}
+section{padding:64px 0}
+.section-head h2{letter-spacing:-.035em}
+.explore-home{
+  background:linear-gradient(180deg,#f7faff,#fff);
+  padding:54px 0 66px;
+}
+.explore-grid{gap:16px}
+.explore-card{
+  position:relative;overflow:hidden;
+  border:1px solid #dce7f3;
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 10px 28px rgba(20,52,91,.055);
+}
+.explore-card:before{
+  content:"";position:absolute;left:0;top:0;width:100%;height:4px;
+  background:linear-gradient(90deg,#2563eb,#0ea5e9);
+  opacity:.8;
+}
+.explore-card:nth-child(2):before{background:linear-gradient(90deg,#16a36a,#22c55e)}
+.explore-card:nth-child(3):before{background:linear-gradient(90deg,#7c3aed,#a855f7)}
+.explore-card:nth-child(4):before{background:linear-gradient(90deg,#f97316,#f59e0b)}
+.explore-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 42px rgba(20,52,91,.13);
+  border-color:#bcd2ea;
+}
+.explore-card .num{
+  display:inline-grid;place-items:center;
+  width:34px;height:34px;border-radius:11px;
+  background:#eef5ff;color:#2563eb;
+}
+.explore-card:nth-child(2) .num{background:#eafaf2;color:#168a52}
+.explore-card:nth-child(3) .num{background:#f3edff;color:#7c3aed}
+.explore-card:nth-child(4) .num{background:#fff3e8;color:#e56b12}
+.card{
+  border-radius:20px;
+  border-color:#dce7f2;
+  box-shadow:0 10px 30px rgba(20,52,91,.055);
+}
+.storybtn{
+  border-radius:999px;
+  padding:9px 14px;
+  background:#f1f6ff;
+  border-color:#cfe0f5;
+  transition:.18s ease;
+}
+.storybtn:hover{
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+  border-color:transparent;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(37,99,235,.18);
+}
+.livebtn{
+  border-radius:999px;
+  background:linear-gradient(135deg,#168a52,#22b573);
+  border:0;
+  padding:10px 15px;
+  box-shadow:0 8px 20px rgba(22,138,82,.18);
+}
+.tech{
+  border-radius:999px;
+  background:#f8fbff;
+  border-color:#d7e4f1;
+  padding:8px 12px;
+}
+.lab{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(14,165,233,.15),transparent 28%),
+    linear-gradient(135deg,#071426,#0b2949);
+}
+.modal{background:rgba(5,18,35,.76)}
+.modalbox{
+  border-radius:26px;
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 35px 100px rgba(0,21,47,.28);
+}
+.x{border-radius:12px}
+.contact-option{
+  border-radius:16px;
+  background:linear-gradient(180deg,#fbfdff,#f6f9fd);
+}
+.contact-option .contact-actions a,.contact-option .contact-actions button{
+  border-radius:999px;
+  padding:8px 12px;
+}
+footer{
+  background:linear-gradient(135deg,#061426,#092743);
+}
+
+
+/* ===== Cinematic infrastructure background ===== */
+.hero{
+  position:relative;
+  isolation:isolate;
+  min-height:650px;
+  background:
+    linear-gradient(90deg,rgba(3,15,31,.86) 0%,rgba(5,24,45,.76) 42%,rgba(4,30,43,.70) 100%),
+    url("portfolio-hero-background.png") center center/cover no-repeat;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(3,15,31,.08),rgba(3,15,31,.22));
+}
+.hero:after{display:none}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{grid-template-columns:1fr;max-width:900px}
+.hero-grid>div:first-child{max-width:820px}
+.hero .orbit{display:none}
+.hero h1{text-shadow:0 5px 28px rgba(0,0,0,.35)}
+.hero p{max-width:760px}
+.hero .metrics{
+  max-width:850px;
+  padding:8px 18px 0;
+  border-radius:20px;
+  background:rgba(4,22,42,.34);
+  backdrop-filter:blur(7px);
+  border:1px solid rgba(155,211,255,.12);
+}
+.hero .actions .btn{backdrop-filter:blur(8px)}
+@media(max-width:850px){
+  .hero{min-height:auto;background-position:45% center}
+  .hero .metrics{padding:4px 12px 0}
+}
+
 </style>
 </head>
 <body>
 <nav><div class="wrap nav"><div class="brand"><span>KV</span> KRANTHI VEERAVALLI</div>
-<a href="#experience">Experience</a><a href="#engineering">Engineering</a><a href="#lessons">Lessons Learned</a><a href="#lab">Innovation Lab</a>
+<a href="#engineering">Engineering</a><a href="#lab">Innovation Lab</a><a href="#experience">Career</a>
 <div class="dropdown"><button class="dropbtn">Technology Suite ▾</button><div class="dropmenu">
 <b>Infrastructure & Virtualization</b><p>VMware vSphere • ESXi • vCenter • SRM • VCF Lifecycle • Nutanix AHV • Prism • Move • NC2 • Windows • Linux</p>
 <b>Enterprise Storage & SAN</b><p>NetApp • Hitachi VSP • Infinidat • Dell EMC VMAX • VNX 5700 • PowerMax • PowerStore • Isilon • Cisco MDS • Brocade • NFS • SMB/CIFS</p>
@@ -72,27 +325,30 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 <b>Automation & Platform Operations</b><p>Ansible • AWX / AAP • PowerShell • REST APIs • GitLab CI/CD • ServiceNow • ITIL • Splunk</p>
 <b>Cloud, Observability & Modern Platforms</b><p>Azure • Azure Arc • Azure Local • GCP • Kubernetes • Prometheus • Grafana • GPU/AI Infrastructure</p>
 <b>AI + Infrastructure • Exploration</b><p>Vertex AI + Gemini for proactive infrastructure intelligence • Nutanix Enterprise AI + enterprise LLMs for log, incident and RCA assistance.</p>
-</div></div><a href="#resume">Resume</a><button class="btn" data-modal="recruiter" style="border:0;color:#0866e8">Recruiter View</button><a class="btn primary" href="mailto:kranthi.veeravalli@outlook.com">Let's Connect</a></div></nav>
+</div></div><a href="#resume">Resume</a><button class="btn" data-modal="recruiter" style="border:0;color:#0866e8">Recruiter View</button><button class="btn primary" data-modal="contact">Let's Connect</button></div></nav>
 
 <header class="hero"><div class="wrap"><div class="hero-grid"><div>
 <div class="eyebrow">Infrastructure • Automation • Cloud • Innovation</div>
 <h1>Kranthi Veeravalli</h1><h2>Senior Infrastructure & Automation Engineer</h2>
 <p>I engineer reliable enterprise infrastructure, automate complex operations, modernize platforms, and turn practical ideas into working solutions.</p>
-<div class="actions"><a class="btn primary" href="#engineering">Explore My Engineering</a><a class="btn" href="#lab">Innovation Lab</a><a class="btn" href="#resume">View Resume</a></div>
-<div class="metrics"><div class="metric"><b>13+ Years</b><span>Enterprise experience</span></div><div class="metric"><b>Enterprise</b><span>Modernization & migrations</span></div><div class="metric"><b>Hybrid</b><span>Cloud & infrastructure</span></div><div class="metric"><b>Automation</b><span>At enterprise scale</span></div></div>
+<div class="actions"><a class="btn primary" href="#explore">Explore Portfolio</a><button class="btn" data-modal="recruiter">30-Second Recruiter View</button><a class="btn" href="#resume">Resume</a></div>
+<div class="metrics"><div class="metric"><b>13+ Years</b><span>Enterprise infrastructure</span></div><div class="metric"><b>VMware-to-Nutanix workloads</b><span>VMware → Nutanix scope</span></div><div class="metric"><b>495 Switches</b><span>SAN upgrade automation</span></div><div class="metric"><b>260+ Shares</b><span>Cyber recovery</span></div></div>
 </div><div class="orbit"><div class="core"><div><b>Engineer</b><br>Build • Automate<br>Modernize • Innovate</div></div><div class="chip c1">VMware</div><div class="chip c2">Nutanix</div><div class="chip c3">Cloud</div><div class="chip c4">Storage & SAN</div><div class="chip c5">Ansible</div></div></div></div></header>
-
-<section><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">What I Engineer</div><h2>Enterprise Capabilities</h2></div><p>Not a wall of logos. Each capability connects to real infrastructure responsibilities, migrations, automation and operational outcomes.</p></div>
-<div class="cards">
-<div class="card"><div class="icon">▦</div><h3>Infrastructure & Virtualization</h3><p>VMware vSphere, vCenter, SRM, VCF, Nutanix AHV, Windows and Linux infrastructure.</p></div>
-<div class="card"><div class="icon">◉</div><h3>Storage, SAN & Data Protection</h3><p>NetApp, Hitachi VSP, Infinidat, Dell EMC VMAX/VNX/PowerMax/PowerStore/Isilon, Cisco MDS, Brocade, replication and data protection.</p></div>
-<div class="card"><div class="icon">⚙</div><h3>Automation & Operations</h3><p>Ansible, AWX/AAP, PowerShell, REST APIs, CI/CD, ServiceNow and large-scale infrastructure automation.</p></div>
-<div class="card"><div class="icon">☁</div><h3>Cloud & Modern Platforms</h3><p>Azure, Azure Local, Azure Arc, GCP, Kubernetes, monitoring and AI/GPU infrastructure.</p></div>
+<section id="explore" class="explore-home"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Choose Your View</div><h2>Explore What Matters to You</h2></div><p>Start with the area most relevant to your role. Detailed engineering stories remain available when you want to go deeper.</p></div>
+<div class="explore-grid">
+<a class="explore-card" href="#engineering"><span class="num">01</span><h3>Engineering</h3><p>Migrations, automation, storage, DR, cyber resilience and modern infrastructure.</p></a>
+<a class="explore-card" href="#lab"><span class="num">02</span><h3>Innovation Lab</h3><p>BhoomiSetu, Deal Guru, Advaitha and practical cloud experimentation.</p></a>
+<a class="explore-card" href="#experience"><span class="num">03</span><h3>Career Journey</h3><p>How my experience evolved from storage and SAN to hybrid and AI/ML infrastructure.</p></a>
+<a class="explore-card" href="#resume"><span class="num">04</span><h3>Resume & Recruiter View</h3><p>30-second, 3-minute and detailed technical views, plus the conventional resume.</p></a>
 </div></div></section>
+
+
+
 
 <section class="soft impact"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Selected Engineering Impact</div><h2>Technology → Measurable Results</h2></div><p>Delivered outcomes alongside forward-looking AI + infrastructure initiatives currently being explored.</p></div>
 <div class="cards">
-<div class="card"><b>~3,000 VMs</b><h3>VMware → Nutanix Migration</h3><p>Direct migration scope across production, test and sandbox, including VDI and application workloads.</p><button class="storybtn" data-modal="vmcase">View migration →</button></div>
+<div class="card"><b>VMware-to-Nutanix workloads</b><h3>VMware → Nutanix Migration</h3><p>Direct migration scope across production, test and sandbox, including VDI and application workloads.</p><button class="storybtn" data-modal="vmcase">View migration →</button></div>
 <div class="card"><b>495 SAN Switches</b><h3>Ansible Code Upgrades</h3><p>Cisco SAN upgrade automation across a two-location environment; broader upgrade cycle improved from roughly six months to about one month.</p><button class="storybtn" data-modal="sancase">View automation →</button></div>
 <div class="card"><b>46 Arrays</b><h3>Enterprise Storage & DR</h3><p>Storage/SAN operations, replication, DR and data protection across enterprise platforms.</p><button class="storybtn" data-modal="drimpact">View resilience →</button></div>
 <div class="card"><b>260+ NAS Shares</b><h3>Cyber Resilience & Ransomware Recovery</h3><p>Recovered production and test file shares after a ransomware incident using an isolated recovery network and Pure Storage as the clean migration target.</p><button class="storybtn" data-modal="cybercase">View recovery →</button></div>
@@ -106,8 +362,8 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 
 <section id="engineering"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Engineering Stories</div><h2>From Challenge to Working Solution</h2></div><p>Click a story to see the challenge, engineering approach and outcome.</p></div>
 <details><summary>01 — Enterprise Modernization: VMware → Nutanix AHV</summary>
-<p><b>Environment:</b> ~10,000+ VM enterprise estate across production, test and sandbox.</p>
-<p><b>My scope:</b> ~3,000 VMs, including VDI and application workloads, including systems supporting Oracle databases.</p>
+<p><b>Environment:</b> enterprise-scale workloads enterprise estate across production, test and sandbox.</p>
+<p><b>My scope:</b> VMware-to-Nutanix workloads, including VDI and application workloads, including systems supporting Oracle databases.</p>
 <p><b>Platform:</b> Nutanix clusters built on Dell server infrastructure.</p>
 <button class="storybtn" data-modal="vmcase">View full engineering story →</button>
 </details>
@@ -147,32 +403,12 @@ footer{padding:36px 0;background:#06162b;color:#c9d8e8}.foot{display:flex;justif
 <div><b>Storage Replication & DR</b><p>Replication between enterprise arrays, VMware SRM protection/recovery planning, failover validation and RTO/RPO-focused operations.</p></div>
 <div><b>Automation Across Infrastructure</b><p>Ansible/AWX-AAP and PowerShell applied beyond one device type: SAN upgrades, health checks, certificates and repeatable infrastructure operations.</p></div>
 </div></div></section>
-<section class="soft" id="lessons"><div class="wrap">
-<div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Lessons Learned</div><h2>What Real Infrastructure Delivery Taught Me</h2></div>
-<p>Successful infrastructure work is not only the final architecture. It is planning, implementation, failures, recovery, validation and the lessons carried into the next change.</p></div>
 
-<div class="cards">
-<div class="card story"><div class="icon">N</div><h3>Nutanix Platform Transition</h3>
-<p>Cluster setup on Dell servers, migration readiness, workload transition, operational validation and the challenges encountered while moving enterprise workloads from VMware to Nutanix.</p>
-<button class="storybtn" data-modal="nutanixlesson">Setup • Implementation • Challenges →</button></div>
-
-<div class="card story"><div class="icon">↻</div><h3>Nutanix Lifecycle & Upgrade Thinking</h3>
-<p>Upgrade planning should begin with compatibility, health and dependency checks—not with the upgrade button. Controlled sequencing and recovery readiness are part of the design.</p>
-<button class="storybtn" data-modal="nutanixupgrade">Upgrade Approach →</button></div>
-
-<div class="card story"><div class="icon">A</div><h3>Automation Failure Is Engineering Data</h3>
-<p>AWX failures, timeouts, resource constraints and device-side storage issues shaped better pre-checks, batching, retry and validation strategies.</p>
-<button class="storybtn" data-modal="sancase">Automation Lessons →</button></div>
-
-<div class="card story"><div class="icon">✓</div><h3>Successful Transition Requires Validation</h3>
-<p>Migration success is more than moving a VM: application reachability, storage, network, database dependencies, performance and operational handoff must all be validated.</p>
-<button class="storybtn" data-modal="transitionlesson">Transition Lessons →</button></div>
-</div></div></section>
 
 <section id="lab" class="lab"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Kranthi's Innovation Lab</div><h2>Beyond the Enterprise</h2></div><p>Personal projects. Real problems. Working solutions. A place to show curiosity, product thinking and practical cloud engineering.</p></div>
-<div class="labgrid"><div class="card"><span class="flag">FLAGSHIP PROJECT</span><h2>BhoomiSetu</h2><h3>Andhra Pradesh Land Intelligence Platform</h3><p>Land information, marketplace intelligence, location validation, agriculture insights and a bilingual English/తెలుగు experience.</p><div class="techbar"><span class="tech">Data</span><span class="tech">GCP</span><span class="tech">Marketplace</span><span class="tech">Verification</span><span class="tech">English | తెలుగు</span></div></div>
-<div class="card"><h2>Deal Guru</h2><h3>Retail Value Intelligence</h3><p>Compare products across retailers by matching quantities and normalizing unit price—not just sticker price.</p><div class="techbar"><span class="tech">APIs</span><span class="tech">Data Processing</span><span class="tech">Cloud</span></div></div>
-<div class="card"><h2>Advaitha</h2><h3>School Assistant</h3><p>A cloud-based reminder assistant using Telegram, Cloud Run, Firestore and scheduled notifications.</p><div class="techbar"><span class="tech">Telegram</span><span class="tech">Cloud Run</span><span class="tech">Firestore</span></div></div></div>
+<div class="labgrid"><div class="card bhoomi-card"><span class="flag">FLAGSHIP PROJECT</span><h2>BhoomiSetu</h2><h3>Andhra Pradesh Land Intelligence Platform</h3><p>One platform for land discovery, marketplace intelligence, agriculture guidance and land-related information with an English + తెలుగు experience.</p><div class="bhoomi-stats"><div class="bhoomi-stat"><b>28</b><span>Districts</span></div><div class="bhoomi-stat"><b>688</b><span>Mandals</span></div><div class="bhoomi-stat"><b>17,957</b><span>Villages</span></div></div><div class="techbar"><span class="tech">Nutanix Leap / Flow / NGT</span><span class="tech">NetApp CVO / BlueXP</span><span class="tech">SnapMirror / SnapVault</span><span class="tech">Azure NetApp Files</span><span class="tech">Rubrik</span><span class="tech">QNAP NAS / Backup</span><span class="tech">Kubernetes GPU Nodes</span><span class="tech">NVIDIA DCGM</span><span class="tech">GCP</span><span class="tech">Cloud Run</span><span class="tech">Firestore</span><span class="tech">REST APIs</span><span class="tech">Data Processing</span><span class="tech">English | తెలుగు</span></div><div class="project-status">Working Prototype • Active Development</div><div class="lab-actions"><a class="livebtn" href="https://bhoomisetu-ro7ukepp2q-uc.a.run.app/app" target="_blank" rel="noopener noreferrer">Launch Live App ↗</a><button class="storybtn" data-modal="bhoomideep">View Case Study →</button></div></div>
+<div class="card"><h2>Deal Guru</h2><h3>Retail Value Intelligence</h3><p><b>Goal:</b> Help shoppers identify the real best deal by comparing product quantities and normalized unit pricing—not just the advertised price.</p><div class="techbar"><span class="tech">Google Cloud</span><span class="tech">Cloud Run</span><span class="tech">APIs</span><span class="tech">Data Processing</span></div><div class="project-status">Working Prototype • Continuing Development</div><div class="lab-actions"><button class="storybtn" data-modal="dealgurudeep">Project Details →</button></div></div>
+<div class="card"><h2>Advaitha</h2><h3>School Assistant</h3><p><b>Goal:</b> Make school and daily reminders simple through Telegram instead of requiring another dedicated mobile app.</p><div class="techbar"><span class="tech">Telegram</span><span class="tech">Cloud Run</span><span class="tech">Firestore</span><span class="tech">Flask</span><span class="tech">Cloud Secrets</span></div><div class="project-status">Working Prototype • Continuing Development</div><div class="lab-actions"><button class="storybtn" data-modal="advaithadeep">Project Details →</button></div></div></div>
 <div class="ai-lite"><b>AI + Infrastructure • Exploration</b>
 Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix Enterprise AI + enterprise LLMs for logs, incidents and RCA assistance.
 <button class="storybtn" data-modal="aicase" style="margin-left:8px">Explore concepts →</button></div>
@@ -180,10 +416,12 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 
 <section id="experience"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Career Journey</div><h2>Experience That Evolved With Technology</h2></div><p>A concise recruiter view. The final site can expand each role into selected deliveries without reproducing the entire résumé.</p></div>
 <div class="timeline">
-<div class="role"><div class="date">March 2026 — Present</div><h3>Cornell University — Lab of Ornithology</h3><b>Senior Lead Infrastructure Administrator</b><p>VMware and Azure Local modernization, AI/GPU infrastructure, Kubernetes, storage/backup, Active Directory migration and platform operations.</p></div>
+<div class="role"><div class="date">March 2026 — July 2026</div><h3>Cornell University — Lab of Ornithology</h3><b>Senior Lead Infrastructure Administrator</b><p>Dell PowerEdge R7725 AI/GPU infrastructure, Kubernetes GPU nodes, QNAP storage and backup, Active Directory OU migration, Prometheus/Grafana monitoring and platform operations.</p></div>
 <div class="role"><div class="date">March 2023 — December 2025</div><h3>HCL Technologies</h3><b>Senior Lead Infrastructure Engineer</b><p>Large-scale Nutanix migrations, VMware, enterprise storage, SAN, automation, cloud storage integration and observability.</p></div>
 <div class="role"><div class="date">May 2021 — January 2023</div><h3>NTT Data</h3><b>Systems Integration Advisor</b><p>Hybrid infrastructure integration, storage migrations, NetApp, Dell EMC, Nutanix and enterprise project delivery.</p></div>
-<div class="role"><div class="date">2012 — 2021</div><h3>Mphasis • DXC Technologies</h3><b>Infrastructure Engineering & Leadership</b><p>SAN/NAS engineering, enterprise storage migrations, automation concepts, operations leadership and large end-of-life modernization programs.</p></div>
+<div class="role"><div class="date">April 2019 — May 2021</div><h3>Mphasis Pvt Ltd</h3><b>Sr. Principal Infrastructure Engineer</b><p>Enterprise storage and SAN/NAS operations, legacy storage migrations, self-help tools and leadership of 20+ engineers.</p></div>
+<div class="role"><div class="date">July 2017 — April 2019</div><h3>DXC Technologies</h3><b>ITO Services Delivery Consultant</b><p>End-of-life storage modernization, EMC-to-VMAX migrations, SRDF and host-based cutovers, performance analysis and storage provisioning.</p></div>
+<div class="role"><div class="date">September 2012 — April 2017</div><h3>Mphasis Pvt Ltd — Sabre Holdings</h3><b>Team Lead Specialization</b><p>Enterprise NAS/SAN support, Celerra-to-Isilon migrations, Data Domain, storage upgrades and mentoring across global operations teams.</p></div>
 </div></div></section>
 
 <section id="resume" class="soft"><div class="wrap"><div class="section-head"><div><div class="eyebrow" style="color:#0866e8">Recruiter View</div><h2>One Link. Multiple Depths.</h2></div><p>A recruiter can understand the profile quickly; a hiring manager can open engineering stories; a technical interviewer can explore architecture and design decisions.</p></div>
@@ -194,8 +432,23 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <p class="note">Prototype note: public launch should remove phone details from the page, verify all quantified claims, confirm employer-confidentiality boundaries, and connect final Resume / LinkedIn / project URLs.</p>
 </div></section>
 
-<footer><div class="wrap"><div class="foot"><div><b style="font-size:21px">Let's Build Reliable Infrastructure</b><div style="margin-top:6px">Infrastructure • Automation • Hybrid Cloud • Modernization</div></div><a class="btn primary" href="mailto:kranthi.veeravalli@outlook.com">Let's Connect</a></div></div></footer>
+<footer><div class="wrap"><div class="foot"><div><b style="font-size:21px">Let's Build Reliable Infrastructure</b><div style="margin-top:6px">Infrastructure • Automation • Hybrid Cloud • Modernization</div></div><button class="btn primary" data-modal="contact">Let's Connect</button></div></div></footer>
 
+
+
+<div class="modal" id="contact"><div class="modalbox"><button class="x">×</button>
+<div class="contact-profile">
+<div class="eyebrow" style="color:#0866e8">Professional Contact</div>
+<h2>Kranthi Kumar Veeravalli</h2>
+<p>Infrastructure • Automation • Hybrid Cloud • Modernization</p>
+</div>
+<div class="contact-options">
+<div class="contact-option"><div class="contact-info"><span class="contact-label">Email</span><span class="contact-value">kranthi.veeravalli@outlook.com</span></div><div class="contact-actions"><a href="mailto:kranthi.veeravalli@outlook.com">Send Email</a><button type="button" data-copy="kranthi.veeravalli@outlook.com">Copy</button></div></div>
+<div class="contact-option"><div class="contact-info"><span class="contact-label">Phone</span><span class="contact-value">+1 (754) 284-1138</span></div><div class="contact-actions"><a href="tel:+17542841138">Call</a><button type="button" data-copy="+1 (754) 284-1138">Copy</button></div></div>
+<div class="contact-option"><div class="contact-info"><span class="contact-label">LinkedIn</span><span class="contact-value">Kranthi Kumar Veeravalli</span></div><div class="contact-actions"><a href="https://www.linkedin.com/in/kk-v-60b581150/" target="_blank" rel="noopener noreferrer">View Profile →</a></div></div>
+</div>
+<div class="contact-resume"><a class="storybtn" href="resume.html" target="_blank">View Resume →</a></div>
+</div></div>
 
 <div class="modal" id="gpucase"><div class="modalbox"><button class="x">×</button>
 <div class="eyebrow" style="color:#0866e8">Modern Infrastructure • AI/ML Enablement</div>
@@ -248,7 +501,7 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <p><b>Guardrail:</b> This remains an exploration/POC direction. Incident creation, RCA acceptance and remediation stay governed by human review and existing operational controls.</p>
 </div></div>
 
-<div class="modal" id="vmcase"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Engineering Case Study</div><h2>VMware → Nutanix AHV Modernization</h2><p><b>Context:</b> The organization operated an estate of approximately 10,000+ VMs across production, test and sandbox. My direct migration scope was approximately 3,000 VMs.</p><p><b>Workloads:</b> VDI and application VMs, including systems supporting Oracle database workloads.</p><p><b>Target platform:</b> Nutanix clusters built on Dell server infrastructure.</p><p><b>Engineering approach:</b> workload assessment, readiness and dependency validation, migration waves, cutover planning, rollback readiness and post-migration validation.</p><p><b>Business rationale:</b> The modernization was also driven by the need to reduce VMware licensing/infrastructure cost and simplify platform operations. The public portfolio explains the cost-reduction strategy without publishing an exact savings figure until that number is separately approved for external disclosure.</p><p><b>Portfolio principle:</b> the overall environment scale and my direct delivery scope are intentionally shown separately.</p></div></div>
+<div class="modal" id="vmcase"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Engineering Case Study</div><h2>VMware → Nutanix AHV Modernization</h2><p><b>Context:</b> The organization operated an estate of approximately enterprise-scale workloads across production, test and sandbox. My direct migration scope was VMware-to-Nutanix workloads.</p><p><b>Workloads:</b> VDI and application VMs, including systems supporting Oracle database workloads.</p><p><b>Target platform:</b> Nutanix clusters built on Dell server infrastructure.</p><p><b>Engineering approach:</b> workload assessment, readiness and dependency validation, migration waves, cutover planning, rollback readiness and post-migration validation.</p><p><b>Business rationale:</b> The modernization was also driven by the need to reduce VMware licensing/infrastructure cost and simplify platform operations. The public portfolio explains the cost-reduction strategy without publishing an exact savings figure until that number is separately approved for external disclosure.</p><p><b>Portfolio principle:</b> the overall environment scale and my direct delivery scope are intentionally shown separately.</p></div></div>
 
 <div class="modal" id="sancase"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Automation at Scale</div><h2>Cisco SAN Code Upgrade Automation</h2><p><b>Environment:</b> 495 Cisco SAN switches and 46 enterprise storage arrays across two locations, spanning production, test and sandbox.</p><p><b>Before:</b> software images were staged and upgrades executed manually; a fleet cycle could take about six months.</p><p><b>Automation:</b> Ansible playbooks executed through the enterprise automation controller, first validated against test switches and then expanded through controlled rollout.</p><p><b>Result:</b> an individual switch upgrade could typically run in roughly 20 minutes depending on chassis/module count, while the broader upgrade cycle was reduced to about one month.</p><p><b>Challenges:</b> failed/suspended controller jobs, controller resource pressure, insufficient switch image-storage space, upgrade termination and timeout handling.</p><p><b>Lessons:</b> pre-check image/platform compatibility, available space, controller capacity and timeouts; use controlled batches, failure handling, recovery procedures and post-upgrade validation.</p></div></div>
 
@@ -259,7 +512,7 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <div class="eyebrow" style="color:#0866e8">Lessons Learned • Nutanix</div>
 <h2>From Cluster Setup to Successful Workload Transition</h2>
 <p><b>Platform setup:</b> Nutanix clusters were built on Dell server infrastructure. The work required treating compute, storage, networking, cluster health and operational readiness as one platform rather than independent components.</p>
-<p><b>Migration preparation:</b> The source VMware estate contained production, test and sandbox workloads. My direct migration scope was approximately 3,000 VMs, including VDI and application VMs and systems supporting Oracle database workloads.</p>
+<p><b>Migration preparation:</b> The source VMware estate contained production, test and sandbox workloads. My direct migration scope was VMware-to-Nutanix workloads, including VDI and application VMs and systems supporting Oracle database workloads.</p>
 <p><b>Implementation approach:</b> assess workloads and dependencies → validate target capacity/readiness → group migration waves → perform controlled cutover → validate application/network/storage behavior → monitor after transition.</p>
 <p><b>Challenges & failures:</b> Not every workload should be treated the same. Dependencies, migration windows, application behavior, database sensitivity, network reachability, storage performance and rollback requirements can change the migration approach. Failures and exceptions need to be isolated rather than allowing one workload to disrupt an entire wave.</p>
 <p><b>Successful transition:</b> A migration is complete only after workload health, connectivity, application access, performance and operational ownership are validated on the Nutanix platform.</p>
@@ -293,7 +546,7 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 
 <div class="modal" id="casehub15"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">15-Minute Engineering View</div><h2>Choose the Engineering Story</h2><p>Go deeper into architecture, challenges, failures, lessons and outcomes.</p>
 <div class="casehub">
-<button data-modal="vmcase"><b>VMware → Nutanix Modernization</b><span>~3,000 VM scope • Dell/Nutanix clusters • migration waves • licensing/operational cost reduction rationale</span></button>
+<button data-modal="vmcase"><b>VMware → Nutanix Modernization</b><span>VMware-to-Nutanix workloads scope • Dell/Nutanix clusters • migration waves • licensing/operational cost reduction rationale</span></button>
 <button data-modal="sancase"><b>Cisco SAN Upgrade Automation</b><span>495 switches • Ansible • AWX/AAP failures • prechecks • ~6 months → ~1 month</span></button>
 <button data-modal="cybercase"><b>Cyber Resilience & Ransomware Recovery</b><span>260+ NAS shares • isolated recovery network • Pure Storage • validation • controlled restoration</span></button>
 <button data-modal="nutanixlesson"><b>Nutanix Setup & Transition</b><span>Platform setup • implementation • workload transition • challenges • validation</span></button>
@@ -302,9 +555,9 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <button data-modal="transitionlesson"><b>DR / Migration Validation</b><span>Dependencies • rollback • application/network/storage validation • operational handoff</span></button>
 </div></div></div>
 
-<div class="modal" id="bhoomideep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab • Flagship</div><h2>BhoomiSetu</h2><div class="innov-detail"><div><b>Problem</b><span>Land information is fragmented and difficult for farmers, public users and NRIs to understand in one place.</span></div><div><b>What I Built</b><span>AP district/mandal/village data pipeline, marketplace aggregation, validation/scoring concepts, agriculture context, API and bilingual UI.</span></div><div><b>Current State</b><span>Cloud-hosted working platform with statewide location data and an evolving land marketplace/data-validation pipeline.</span></div></div></div></div>
-<div class="modal" id="dealgurudeep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab</div><h2>Deal Guru</h2><div class="innov-detail"><div><b>Problem</b><span>Package price alone hides which retailer actually offers the best unit value.</span></div><div><b>What I Built</b><span>Multi-store comparison logic, quantity normalization, unit-price calculation and value comparison.</span></div><div><b>Current State</b><span>Working prototype with cloud/mobile-access direction and messaging-agent exploration.</span></div></div></div></div>
-<div class="modal" id="advaithadeep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab</div><h2>Advaitha School Assistant</h2><div class="innov-detail"><div><b>Problem</b><span>School and daily reminders needed a simple mobile interaction instead of another complex app.</span></div><div><b>What I Built</b><span>Telegram assistant, Cloud Run webhook, Firestore reminder storage and scheduled notification workflow.</span></div><div><b>Current State</b><span>Working cloud-based reminder assistant with scheduled-message expansion planned.</span></div></div></div></div>
+<div class="modal" id="bhoomideep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#168a52">Innovation Lab • Flagship Project</div><h2>BhoomiSetu — Andhra Pradesh Land Intelligence Platform</h2><p><b>Purpose:</b> Bring fragmented land, location, marketplace and agriculture information into a simpler cloud-based experience for Andhra Pradesh users, including NRIs.</p><p><b>Goal:</b> Let a user begin with a location and progressively explore land information, available listings and practical agriculture/land guidance through an English + తెలుగు experience.</p><div class="innov-detail"><div><b>Problem</b><span>Land-related information is distributed across different sources and can be difficult to understand or compare in one place.</span></div><div><b>What I Built</b><span>Statewide location hierarchy and APIs, land marketplace foundation, listing/location validation workflows, agriculture context and a bilingual cloud application.</span></div><div><b>Current State</b><span>Live working prototype with core user workflows available and additional intelligence capabilities continuing to evolve.</span></div></div><h3>Scale</h3><div class="bhoomi-stats"><div class="bhoomi-stat"><b>28</b><span>Districts</span></div><div class="bhoomi-stat"><b>688</b><span>Mandals</span></div><div class="bhoomi-stat"><b>17,957</b><span>Villages</span></div></div><h3>Working Features</h3><div class="feature-grid"><div>✓ Land Information / Search</div><div>✓ Land Marketplace</div><div>✓ NRI360 land experience</div><div>✓ Add Your Land workflow</div><div>✓ Crop &amp; Water Advice</div><div>✓ Legal Examination section</div><div>✓ Help / guided navigation</div><div>✓ English + తెలుగు experience</div></div><h3>Technology Stack</h3><div class="techbar"><span class="tech">Google Cloud</span><span class="tech">Cloud Run</span><span class="tech">Firestore</span><span class="tech">REST APIs</span><span class="tech">Flask</span><span class="tech">Gunicorn</span><span class="tech">Data Processing</span></div><h3>Architecture</h3><div class="arch-flow"><span>User<br>English + తెలుగు UI</span><span>Web Application</span><span>Cloud Run<br>API / App Layer</span><span>Location • Marketplace • Agriculture Services</span><span>Firestore / Structured Data</span></div><h3>Project Status</h3><p><span class="project-status">Working Prototype • Active Development</span></p><div class="roadmap"><div><b>Foundation ✓</b>Statewide location data and cloud application foundation.</div><div><b>Core Workflows ✓</b>Land search, marketplace and user-facing guidance.</div><div><b>Intelligence ◐</b>Continue strengthening agriculture, validation and marketplace intelligence.</div><div><b>Future ○</b>Additional risk, due-diligence, alerting and AI-assisted insights where appropriate.</div></div><div class="lab-actions" style="margin-top:22px"><a class="livebtn" href="https://bhoomisetu-ro7ukepp2q-uc.a.run.app/app" target="_blank" rel="noopener noreferrer">Launch BhoomiSetu ↗</a></div><p class="result-note">BhoomiSetu is a personal Innovation Lab project and is not presented as a replacement for official government land records or professional legal due diligence.</p></div></div>
+<div class="modal" id="dealgurudeep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab • Working Prototype</div><h2>Deal Guru — Retail Value Intelligence</h2><div class="innov-detail"><div><b>Goal</b><span>Help shoppers determine the real best deal instead of comparing only the displayed package price.</span></div><div><b>What It Does</b><span>Compares similar products across retailers, accounts for different quantities and normalizes unit pricing to make value easier to compare.</span></div><div><b>Status</b><span>Working prototype with continuing development around retailer data and the comparison experience.</span></div></div><h3>Technologies</h3><div class="techbar"><span class="tech">Google Cloud</span><span class="tech">Cloud Run</span><span class="tech">APIs</span><span class="tech">Data Processing</span><span class="tech">Web UI</span></div></div></div>
+<div class="modal" id="advaithadeep"><div class="modalbox"><button class="x">×</button><div class="eyebrow" style="color:#0866e8">Innovation Lab • Working Prototype</div><h2>Advaitha School Assistant</h2><div class="innov-detail"><div><b>Goal</b><span>Create a simple school and daily reminder assistant that works through Telegram instead of requiring another dedicated mobile app.</span></div><div><b>What It Does</b><span>Accepts reminder requests through Telegram, processes them through a cloud-hosted application, stores reminder information and supports scheduled notifications.</span></div><div><b>Status</b><span>Working cloud-based prototype with continuing development of reminder and notification workflows.</span></div></div><h3>Technologies</h3><div class="techbar"><span class="tech">Telegram Bot</span><span class="tech">Google Cloud Run</span><span class="tech">Firestore</span><span class="tech">Flask</span><span class="tech">Gunicorn</span><span class="tech">Cloud Secrets</span></div></div></div>
 
 <div class="modal" id="recruiter"><div class="modalbox"><button class="x">×</button>
 <div class="eyebrow" style="color:#0866e8">30-Second Recruiter View</div>
@@ -312,7 +565,7 @@ Vertex AI + Gemini for proactive infrastructure analysis &nbsp;•&nbsp; Nutanix
 <p><b>Senior Cloud Operations & Infrastructure Engineer</b> with 13+ years across virtualization, HCI, enterprise storage/SAN, DR, automation, hybrid infrastructure and AI/ML infrastructure enablement.</p>
 
 <div class="recruiter-highlights">
-<div><b>VMware / Nutanix Modernization</b><span>~3,000 VMs in direct VMware → Nutanix migration scope; vSphere, vCenter, SRM, VCF lifecycle, Nutanix AHV/Prism/Move.</span></div>
+<div><b>VMware / Nutanix Modernization</b><span>VMware-to-Nutanix workloads in direct VMware → Nutanix migration scope; vSphere, vCenter, SRM, VCF lifecycle, Nutanix AHV/Prism/Move.</span></div>
 <div><b>Automation at Scale</b><span>Ansible / AWX-AAP for Cisco SAN code upgrades across 495 switches; PowerShell and CI/CD for repeatable infrastructure operations.</span></div>
 <div><b>Enterprise Storage / DR</b><span>46-array environment; NetApp, Hitachi VSP, Infinidat, Dell EMC VMAX/VNX/PowerMax/PowerStore/Isilon, SAN, replication and recovery.</span></div>
 <div><b>Cyber Resilience</b><span>Ransomware recovery involving 260+ production/test NAS shares, an isolated recovery network, migration to Pure Storage, recovery validation and controlled restoration.</span></div>
@@ -346,4 +599,20 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelect
 const ce=document.getElementById('copyEmail'); if(ce) ce.addEventListener('click',async()=>{const v='kranthi.veeravalli@outlook.com';try{await navigator.clipboard.writeText(v)}catch(e){}const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)});
 </script>
 
+<script>
+
+document.querySelectorAll('[data-copy]').forEach(function(btn){
+  btn.addEventListener('click', async function(){
+    var value=this.getAttribute('data-copy');
+    try{
+      await navigator.clipboard.writeText(value);
+      var old=this.textContent;
+      this.textContent='Copied ✓';
+      setTimeout(()=>this.textContent=old,1400);
+    }catch(e){
+      window.prompt('Copy this:', value);
+    }
+  });
+});
+</script>
 </body></html>
